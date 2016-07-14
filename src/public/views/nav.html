@@ -1,0 +1,10 @@
+<div class="branding">
+  <a href="#/">angularJS</a>
+</div>
+<ul ng-controller="RegistrationController">
+  <li>
+    {{currentUser}}
+  </li>
+  <li><a ng-href="#/login" ng-hide="currentUser.email">Login</a></li>
+  <li><a ng-href="#" ng-click="logout()" ng-show="currentUser.email">Logout</a></li>
+</ul>
