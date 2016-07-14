@@ -18,9 +18,7 @@ angular.module('myApp').factory('Authentication', ['$rootScope', '$location', '$
 
     auth.$onAuthStateChanged(function(authUser) {
       if (authUser) {
-        var userRef = firebase.database().ref('users/' + authUser.uid);
-        var userObj = $firebaseObject(userRef);
-        $rootScope.currentUser = userObj;
+        $rootScope.currentUser = firebase.app().auth().currentUser;
       } else {
         $rootScope.currentUser = '';
       }
