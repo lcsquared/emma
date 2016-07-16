@@ -13,7 +13,7 @@ angular.module('myApp').config(['$routeProvider', '$locationProvider', function(
   $routeProvider.
   when('/', {
     templateUrl: '/views/portfolio.html',
-    controller: 'RegistrationController'
+    controller: 'PortfolioController'
   }).
   when('/admin-login', {
     templateUrl: '/views/login.html',
