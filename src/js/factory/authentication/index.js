@@ -28,7 +28,7 @@ angular.module('myApp').factory('Authentication', ['$rootScope', '$location', '$
       login: function(user) {
         auth.$signInWithEmailAndPassword(user.email,user.password)
         .then(function(regUser) {
-          $location.path('/');
+          $location.path('/admin');
         }).catch(function(error) {
           $rootScope.message = error.message;
         });

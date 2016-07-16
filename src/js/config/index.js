@@ -1,16 +1,27 @@
-angular.module('myApp').config(['$routeProvider', function($routeProvider) {
+angular.module('myApp').run(["$rootScope", "$location", function($rootScope, $location) {
+  $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+    // We can catch the error thrown when the $requireSignIn promise is rejected
+    // and redirect the user back to the home page
+    if (error === "AUTH_REQUIRED") {
+      $location.path("/");
+    }
+  });
+}]);
+
+
+angular.module('myApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider.
   when('/', {
     templateUrl: '/views/portfolio.html',
     controller: 'RegistrationController'
   }).
-  when('/login', {
+  when('/admin-login', {
     templateUrl: '/views/login.html',
     controller: 'RegistrationController'
   }).
-  when('/meetings', {
-    templateUrl: '/views/meetings.html',
-    controller: 'MeetingsController',
+  when('/admin', {
+    templateUrl: '/views/admin.html',
+    controller: 'AdminController',
     resolve: {
       currentAuth: function(Authentication) {
           return Authentication.requireAuth();
@@ -20,4 +31,11 @@ angular.module('myApp').config(['$routeProvider', function($routeProvider) {
   otherwise({
     redirectTo: '/'
   });
+
+
+
+  if(window.history && window.history.pushState){
+    $locationProvider.html5Mode(true);
+  }
+
 }]);
