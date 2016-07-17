@@ -1,0 +1,24 @@
+<div class="branding navbar-brand page-scroll">
+  <a href="#">LOGO</a>
+</div>
+
+<ul class="nav navbar-nav navbar-right" ng-controller="RegistrationController">
+  <li class="hidden">
+    <a href="#page-top"></a>
+  </li>
+  <li>
+    <a class="page-scroll" ng-href="#services">Services</a>
+  </li>
+  <li>
+    <a class="page-scroll" ng-href="#portfolio">Portfolio</a>
+  </li>
+  <li>
+    <a class="page-scroll" ng-href="#about">About</a>
+  </li>
+  <li>
+    <a class="page-scroll" ng-href="#contact">Contact</a>
+  </li>
+
+  <li><a ng-href="/admin-login" ng-hide="currentUser.email">Login</a></li>
+  <li><a ng-href="#" ng-click="logout()" ng-show="currentUser.email">Logout</a></li>
+</ul>
