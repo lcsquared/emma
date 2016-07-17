@@ -5,7 +5,6 @@ var angularfire = require('angularfire');
 
 angular.module('myApp', ['ngRoute', 'firebase']);
 
-require('jquery');
 require('./../css/agency.scss');
 
 require('./factory/authentication')
