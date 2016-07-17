@@ -6,12 +6,6 @@ var angularfire = require('angularfire');
 angular.module('myApp', ['ngRoute', 'firebase']);
 
 require('jquery');
-// require('bootstrap');
-
-// require("font-awesome-webpack");
-// require('../node_modules/font-awesome/fonts');
-// require('../node_modules/font-awesome/scss');
-
 require('./../css/agency.scss');
 
 require('./factory/authentication')
