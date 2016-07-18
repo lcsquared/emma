@@ -1,5 +1,5 @@
 'use strict';
-require('./../../../css/admin.css');
+require('./../../../css/admin.scss');
 
 var angular = require('angular');
 
