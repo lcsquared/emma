@@ -1,0 +1,16 @@
+.admin {
+  margin-top: 100px;
+}
+
+.admin-tab {
+  height: 50px;
+  background-color: grey;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.admin-content {
+  background-color: yellow;
+}

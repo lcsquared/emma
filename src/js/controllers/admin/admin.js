@@ -22,6 +22,12 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 					console.log("Error:", error);
 				});
 			};
+
+			$scope.currentTab = 1;
+
+			$scope.changeTab = function(num){
+				$scope.currentTab = num;
+			};
 		}
 	});
 }
