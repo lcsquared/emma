@@ -1,11 +1,10 @@
 PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject']
 
 function PortfolioController($scope, $rootScope, $firebaseObject){
+
 	var ref = firebase.database().ref("portfolio");
 	var obj = $firebaseObject(ref);
-	obj.$bindTo($scope, "portfolio").then(function(){
-		console.log($scope.portfolio);
-	})
+	obj.$bindTo($scope, "portfolio");
 	// meetingsInfo.$loaded().then(function(data){
 	// 	$rootScope.howManyMeetings = meetingsInfo.length;
 	// });

@@ -6,13 +6,6 @@ angular.module('myApp').factory('Authentication', ['$rootScope', '$location', '$
 
   function($rootScope, $location, $firebaseAuth, $firebaseObject) {
 
-    var config = {
-      apiKey: "AIzaSyAj_o4s49Aowy7v4oUg0FTEme52ik306l4",
-      authDomain: "emma-97b41.firebaseapp.com",
-      databaseURL: "https://emma-97b41.firebaseio.com",
-      storageBucket: "",
-    };
-    firebase.initializeApp(config);
     var rootRef = firebase.database().ref();
     var auth = $firebaseAuth();
 

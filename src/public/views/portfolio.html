@@ -1,46 +1,13 @@
-<div class="card meetings cf">
-
-  <div class="textintro">
-    <h1>Portfolio Page</h1>
-    <p>This is where we make this beautiful!</p>
-    <p>{{portfolio.name}}</p>
-    <p>{{portfolio.testimonial[1]}}
-  </div>
-
-</div>
-
-<!-- Navigation Section -->
-<section>
-  <div class="branding navbar-brand page-scroll">
-        <a href="#">EL Consulation</a>
-  </div>
-  <div>
-    <ul class="nav navbar-nav navbar-right" ng-controller="RegistrationController">
-      <li><a class="page-scroll" ng-href="#mypromise">My Promise</a></li>
-      <li><a class="page-scroll" ng-href="#services">Services</a></li>
-      <li><a class="page-scroll" ng-href="#testimonials">Testimonials</a></li>
-      <li><a class="page-scroll" ng-href="#about">About</a></li>
-      <li><a class="page-scroll" ng-href="#contact">Contact</a></li>
-
-      <li><a ng-href="/admin-login" ng-hide="currentUser.email">Login</a></li>
-      <li><a ng-href="#" ng-click="logout()" ng-show="currentUser.email">Logout</a></li>
-    </ul>
-    </div>
-</section>
-
 <!-- Header Section -->
-<section>
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Welcome To My Site!</div>
-        <div class="intro-heading">It's Nice To Meet You</div>
-        <a href="#services" class="page-scroll btn btn-xl">Find Out More</a>
-      </div>
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Welcome To My Site!</div>
+      <div class="intro-heading">It's Nice To Meet You</div>
+      <a href="#services" class="page-scroll btn btn-xl">Find Out More</a>
     </div>
-  </header>
-</section>
-
+  </div>
+</header>
 <!-- Social Media and Links Section -->
 <section>
   <div class="container">
@@ -203,7 +170,8 @@
         </li>
       </ul>
   </div>
-</section>          
+</section>
+
 
 <!-- Contact Section -->
 <section id="contact">
@@ -249,6 +217,16 @@
     </div>
   </div>
 </section>
+
+<div class="card meetings cf">
+  <div class="textintro">
+    <h1>Portfolio Page</h1>
+    <p>This is where we make this beautiful!</p>
+    <p>{{portfolio.name}}</p>
+    <p>{{portfolio.testimonial[1]}}
+  </div>
+
+</div>
 
 <!-- Footer Section -->
 <footer>
