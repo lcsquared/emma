@@ -1,6 +1,7 @@
 PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject']
 
 function PortfolioController($scope, $rootScope, $firebaseObject){
+
 	var ref = firebase.database().ref("portfolio");
 	var obj = $firebaseObject(ref);
 	obj.$bindTo($scope, "portfolio");

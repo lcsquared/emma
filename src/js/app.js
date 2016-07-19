@@ -7,11 +7,19 @@ angular.module('myApp', ['ngRoute', 'firebase']);
 
 require('./../css/agency.scss');
 
-require('./factory/authentication')
+require('./factory/authentication');
 require('./controllers/admin');
 require('./controllers/portfolio');
 require('./controllers/registration');
-require('./config')
+require('./config');
+
+var config = {
+  apiKey: "AIzaSyAj_o4s49Aowy7v4oUg0FTEme52ik306l4",
+  authDomain: "emma-97b41.firebaseapp.com",
+  databaseURL: "https://emma-97b41.firebaseio.com",
+  storageBucket: "",
+};
+firebase.initializeApp(config);
 
 // myApp.run(['$rootScope', '$location', function($rootScope, $location) {
 //   $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
