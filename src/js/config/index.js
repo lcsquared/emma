@@ -13,7 +13,12 @@ angular.module('myApp').config(['$routeProvider', '$locationProvider', function(
   $routeProvider.
   when('/', {
     templateUrl: '/views/portfolio.html',
-    controller: 'PortfolioController'
+    controller: 'PortfolioController',
+    resolve: {
+      portfolio: function(dbConnect){
+        return dbConnect.getData("portfolio");
+      }
+    }
   }).
   when('/admin-login', {
     templateUrl: '/views/login.html',
