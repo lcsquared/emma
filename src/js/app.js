@@ -10,6 +10,7 @@ require('./../css/style.css');
 require('./../js/myscript.js');
 // require('./../css/agency.min.css');
 require('./factory/authentication');
+require('./factory/dbConnect');
 require('./controllers/admin');
 require('./controllers/portfolio');
 require('./controllers/registration');
@@ -22,13 +23,3 @@ var config = {
   storageBucket: "",
 };
 firebase.initializeApp(config);
-
-// myApp.run(['$rootScope', '$location', function($rootScope, $location) {
-//   $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
-//     if (error == "AUTH_REQUIRED") {
-//       $rootScope.message = 'Sorry, you must log in to access that page';
-//       $location.path('/login');
-//     }
-//   })
-// }])
-//
