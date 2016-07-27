@@ -2,4 +2,9 @@
 
 var angular = require('angular');
 
-angular.module('myApp').controller('PortfolioController', require('./portfolio.js'));
+require('./../../../css/agency.scss');
+require('./../../../css/style.css');
+
+angular.module('portfolio', []).controller('PortfolioController', require('./portfolio.js'));
+
+module.exports = 'portfolio';

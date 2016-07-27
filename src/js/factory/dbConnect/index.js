@@ -2,7 +2,7 @@
 
 var angular = require('angular');
 
-angular.module('myApp').factory('dbConnect', ['$rootScope', '$location', '$firebaseAuth', '$firebaseObject',
+angular.module('dbConnect', []).factory('dbConnect', ['$rootScope', '$location', '$firebaseAuth', '$firebaseObject',
 
   function($rootScope, $location, $firebaseAuth, $firebaseObject) {
 
@@ -23,3 +23,5 @@ angular.module('myApp').factory('dbConnect', ['$rootScope', '$location', '$fireb
     return myObject;
   }
 ]);
+
+module.exports = 'dbConnect';

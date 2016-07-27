@@ -56,6 +56,7 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 			$scope.changeTab = function(num){
 				$scope.currentTab = num;
 			};
+			$scope.section = "admin"
 		}
 	});
 }
