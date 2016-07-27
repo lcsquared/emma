@@ -2,7 +2,9 @@ AdminController.$inject = ['$scope', '$rootScope', '$firebaseAuth', '$firebaseOb
 
 function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 	"use strict";
-
+	var storage = firebase.storage()
+	var storageRef = storage.ref();
+	
 	var auth = $firebaseAuth();
 
 	// these actions can only happen when someone is authenticated
@@ -50,6 +52,16 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 					};
 				saveChanges(obj);
 			};
+
+			$scope.saveTab3 = function(){
+				obj.about = {
+ 						name: $scope.portfolio.about.name,
+ 						title: $scope.portfolio.about.title,
+ 						bio: $scope.portfolio.about.bio,
+					};
+				saveChanges(obj);
+			};
+
 
 			$scope.currentTab = 1;
 
