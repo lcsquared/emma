@@ -1,5 +1,5 @@
 $(function() {
-  
+
   "use strict";
 
   var slideqty = $('#featured .item').length;

@@ -53,7 +53,7 @@ angular.module('myApp', ['ngRoute', 'firebase', auth, dbConnect, portfolio, regi
       $location.path("/");
     }
   });
-}]);;;
+}])
 
 var config = {
   apiKey: "AIzaSyAj_o4s49Aowy7v4oUg0FTEme52ik306l4",
