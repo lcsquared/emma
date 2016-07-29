@@ -1,9 +1,8 @@
 <!-- Header Section -->
-<nav class="navbar-default navbar-custom navbar-fixed-top" id="mainNav" ng-include="'/views/portfolio-nav.html'"></nav>
-<header>
+<nav  scroll-fade ng-class="{'navbar-default-opaque': changeBackground}" class="navbar-default navbar-custom navbar-fixed-top" id="mainNav" ng-include="'/views/portfolio-nav.html'"></nav>
+<header >
     <!-- /.container-fluid -->
   <div class="carousel slide" data-ride="carousel" id="featured">
-
     <ol class="carousel-indicators">
     </ol>
 
@@ -37,7 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-lg-offset-1">
-        <h2 class="section-subheading">Social Media</h2>
+        <h2 class="section-subheading">Social Media     {{changeBackground}}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
       <div class="col-lg-6 col-lg-offset-1">
