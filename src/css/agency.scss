@@ -2,7 +2,12 @@
 @import 'mixins';
 
 // Global Components
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   overflow-x: hidden;
   @include body-font;
 }

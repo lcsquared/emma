@@ -1,85 +1,105 @@
 <div class="admin">
   <nav class="admin-navbar-default navbar-custom navbar-fixed-top" id="mainNav" ng-include="'/views/admin-nav.html'"></nav>
-  <div class="row">
-    <div class="col-sm-2">
-      <div class="row">
-        <div class="col-sm-12 admin-tab" ng-click="changeTab(1)">
-          Option 1
+    <div class="row">
+      <div class="col-sm-2 admin-tab-column">
+        <div class="row">
+          <div class="col-sm-12 admin-tab" ng-class="(currentTab==1) ? 'admin-tab-current': ''" ng-click="changeTab(1)">
+            Option 1
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 admin-tab" ng-class="(currentTab==2) ? 'admin-tab-current': ''" ng-click="changeTab(2)">
+            Testimonials
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 admin-tab" ng-class="(currentTab==3) ? 'admin-tab-current': ''" ng-click="changeTab(3)">
+            About Me
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12 admin-tab" ng-click="changeTab(2)">
-          Testimonials
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 admin-tab" ng-click="changeTab(3)">
-          About Me
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-10 admin-content">
-      <div ng-if="currentTab===1">
-        <h1>Admin</h1>
-        <p>This is where the admin content is going to go.</p>
-        <label for="name">Name:</label>
-        <input type="text" ng-model="portfolio.name">
-        <input type="submit" value="Save Changes" ng-click="saveTab1()" />
-      </div>
-      <div ng-if="currentTab===2">
-        <h1>Testimonials</h1>
-        <p>This is where the admin content is going to go.</p>
+      <div class="col-sm-10 admin-content">
+        <div class="row">
+            <div class="col-s-8 col-s-offset-2 col-xs-10 col-xs-offset-1">
+                <div ng-if="currentTab===1">
+                  <div class="admin-main-box">
+                    <div class="admin-main-header">
+                      <h1>Admin</h1>
+                    </div>
+                    <div class="admin-main-content">
+                      <p>This is where the admin content is going to go.</p>
+                      <label for="name">Name:</label>
+                      <input type="text" ng-model="portfolio.name" class="form-control" >
+                      <input type="submit" value="Save Changes" ng-click="saveTab1()" class="btn btn-primary admin-submit-btn"/>
+                    </div>
+                </div>
+              </div>
 
-        <h3>Testimonial 1</h3>
-        <div>
-          <label for="name">Client's Name/Alias:</label>
-          <input type="text" ng-model="portfolio.testimonial[0].name">
-          <label for="title">Client's Title:</label>
-          <input type="text" ng-model="portfolio.testimonial[0].title">
-          <label for="company">Client's Company:</label>
-          <input type="text" ng-model="portfolio.testimonial[0].company">
-          <label for="company">Testimonial Body:</label>
-          <textarea ng-model="portfolio.testimonial[0].contents"></textarea>
-        </div>
+              <div ng-if="currentTab===2">
+                <div class="admin-main-box">
+                  <div class="admin-main-header">
+                    <h1>Testimonials</h1>
+                  </div>
+                <div class="admin-main-content">
 
-        <h3>Testimonial 2</h3>
-        <div>
-          <label for="name">Client's Name/Alias:</label>
-          <input type="text" ng-model="portfolio.testimonial[1].name">
-          <label for="title">Client's Title:</label>
-          <input type="text" ng-model="portfolio.testimonial[1].title">
-          <label for="company">Client's Company:</label>
-          <input type="text" ng-model="portfolio.testimonial[1].company">
-          <label for="company">Testimonial Body:</label>
-          <textarea ng-model="portfolio.testimonial[1].contents"></textarea>
-        </div>
+                <h3>Testimonial 1</h3>
+                <div>
+                  <label for="name">Client's Name/Alias:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].name">
+                  <label for="title">Client's Title:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].title">
+                  <label for="company">Client's Company:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].company">
+                  <label for="company">Testimonial Body:</label>
+                  <textarea class="form-control" ng-model="portfolio.testimonial[0].contents"></textarea>
+                </div>
+                <h3>Testimonial 2</h3>
+                <div>
+                  <label for="name">Client's Name/Alias:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].name">
+                  <label for="title">Client's Title:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].title">
+                  <label for="company">Client's Company:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].company">
+                  <label for="company">Testimonial Body:</label>
+                  <textarea class="form-control" ng-model="portfolio.testimonial[1].contents"></textarea>
+                </div>
 
-        <h3>Testimonial 3</h3>
-        <div>
-          <label for="name">Client's Name/Alias:</label>
-          <input type="text" ng-model="portfolio.testimonial[2].name">
-          <label for="title">Client's Title:</label>
-          <input type="text" ng-model="portfolio.testimonial[2].title">
-          <label for="company">Client's Company:</label>
-          <input type="text" ng-model="portfolio.testimonial[2].company">
-          <label for="company">Testimonial Body:</label>
-          <textarea ng-model="portfolio.testimonial[2].contents"></textarea>
+                <h3>Testimonial 3</h3>
+                <div>
+                  <label for="name">Client's Name/Alias:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].name">
+                  <label for="title">Client's Title:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].title">
+                  <label for="company">Client's Company:</label>
+                  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].company">
+                  <label for="company">Testimonial Body:</label>
+                  <textarea class="form-control" ng-model="portfolio.testimonial[2].contents"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary admin-submit-btn" value="Save Changes" ng-click="saveTab2()" />
+              </div>
+              </div>
+              </div>
+              <div ng-if="currentTab===3">
+                <div class="admin-main-box">
+                  <div class="admin-main-header">
+                      <h1>About Me</h1>
+                  </div>
+                  <div class="admin-main-content">
+                  <div>
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" ng-model="portfolio.about.name">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" ng-model="portfolio.about.title">
+                    <label for="company">Bio:</label>
+                    <textarea class="form-control" ng-model="portfolio.about.bio"></textarea>
+                  </div>
+                  <input type="submit" class="btn btn-primary admin-submit-btn" value="Save Changes" ng-click="saveTab3()" />
+                </div>
+              </div>
+            </div>
+            </div>
         </div>
-        <input type="submit" value="Save Changes" ng-click="saveTab2()" />
-
       </div>
-      <div ng-if="currentTab===3">
-        <h1>About Me</h1>
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" ng-model="portfolio.about.name">
-          <label for="title">Title:</label>
-          <input type="text" ng-model="portfolio.about.title">
-          <label for="company">Bio:</label>
-          <textarea ng-model="portfolio.about.bio"></textarea>
-        </div>
-        <input type="submit" value="Save Changes" ng-click="saveTab3()" />
-      </div>
-    </div>
   </div>
 </div>
