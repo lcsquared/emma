@@ -4,7 +4,7 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 	"use strict";
 	var storage = firebase.storage()
 	var storageRef = storage.ref();
-	
+
 	var auth = $firebaseAuth();
 
 	// these actions can only happen when someone is authenticated
@@ -68,7 +68,6 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 			$scope.changeTab = function(num){
 				$scope.currentTab = num;
 			};
-			$scope.section = "admin"
 		}
 	});
 }

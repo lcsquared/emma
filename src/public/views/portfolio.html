@@ -129,28 +129,43 @@
 </section>
 
 <!-- Testimonials/Clients Section -->
-<section id="testimonials" class="clients">
-  <div class="container">
+<div id="testimonials" class="clients">\
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Happy Clients Says...</h2>
         <h3 class="section-subheading text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
       </div>
     </div>
-
-    <div class="row">
-      <div ng-repeat="testimonial in portfolio.testimonial">
+    <div class="testimonials">
+      <div class="row">
+        <div class="col-sm-8">
+            <blockquote>
+              <span class="quote"><span><i class="icon-quote-left"></i></span></span>
+              <p>&ldquo;{{testimonialContent}}&rdquo;</p>
+            </blockquote>
+            <p class="author">{{testimonialName}} <a href="#" target="_blank">{{testimonialCompany}}</a> <span class="subtext">{{testimonialTitle}}</span></p>
+          </div>
         <div class="col-sm-4">
-          <blockquote>
-            <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-            <p>&ldquo;{{testimonial.contents}}&rdquo;</p>
-          </blockquote>
-          <p class="author">{{testimonial.name}} <a href="#" target="_blank">{{testimonial.company}}</a> <span class="subtext">{{testimonial.title}}</span></p>
+            <div class="row">
+              <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(0)">
+                <div class="testimonial-tab">
+                  Tab 1
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(1)">
+                <div class="testimonial-tab">
+                  Tab 2
+                </div>
+              </div>
+              <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(2)">
+                <div class="testimonial-tab">
+                  Tab 3
+                </div>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- About Section -->
 <section id="about">
