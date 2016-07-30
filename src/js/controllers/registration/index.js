@@ -1,7 +1,7 @@
 'use strict';
 
-require('./../../../css/admin.scss');
-
 var angular = require('angular');
 
-angular.module('myApp').controller('RegistrationController', require('./registration.js'));
+angular.module('registration', []).controller('RegistrationController', require('./registration.js'));
+
+module.exports = 'registration';

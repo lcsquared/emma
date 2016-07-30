@@ -1,8 +1,8 @@
 <!-- Header Section -->
-<header>
-
+<nav  scroll-fade ng-class="{'navbar-default-opaque': changeBackground}" class="navbar-default navbar-custom navbar-fixed-top" id="mainNav" ng-include="'/views/portfolio-nav.html'"></nav>
+<header >
+    <!-- /.container-fluid -->
   <div class="carousel slide" data-ride="carousel" id="featured">
-
     <ol class="carousel-indicators">
     </ol>
 
@@ -35,8 +35,8 @@
 <aside class="clients">
   <div class="container">
     <div class="row">
-      <!-- <div class="col-lg-4 col-lg-offset-1">
-        <h2 class="section-subheading">Social Media</h2>
+      <div class="col-lg-4 col-lg-offset-1">
+        <h2 class="section-subheading">Social Media     {{changeBackground}}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div> -->
       <div class="col-lg-10 col-lg-offset-1">
@@ -139,26 +139,14 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-4">
-        <blockquote>
-          <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-        </blockquote>
-        <p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-      </div>
-      <div class="col-sm-4">
-        <blockquote>
-          <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-        </blockquote>
-        <p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-      </div>
-      <div class="col-sm-4">
-        <blockquote>
-          <span class="quote"><span><i class="icon-quote-left"></i></span></span>
-          <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-        </blockquote>
-        <p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+      <div ng-repeat="testimonial in portfolio.testimonial">
+        <div class="col-sm-4">
+          <blockquote>
+            <span class="quote"><span><i class="icon-quote-left"></i></span></span>
+            <p>&ldquo;{{testimonial.contents}}&rdquo;</p>
+          </blockquote>
+          <p class="author">{{testimonial.name}} <a href="#" target="_blank">{{testimonial.company}}</a> <span class="subtext">{{testimonial.title}}</span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -183,11 +171,11 @@
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-                <h4>Emma Lopez-Bacani</h4>
-                <h4 class="subheading">Restaurant Equipment Specialist</h4>
+                <h4>{{portfolio.about.name}}</h4>
+                <h4 class="subheading">{{portfolio.about.title}}</h4>
             </div>
             <div class="timeline-body">
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                <p class="text-muted">{{portfolio.about.bio}}</p>
             </div>
           </div>
         </li>
@@ -240,16 +228,6 @@
     </div>
   </div>
 </section>
-
-<div class="card meetings cf">
-  <div class="textintro">
-    <h1>Portfolio Page</h1>
-    <p>This is where we make this beautiful!</p>
-    <p>{{portfolio.name}}</p>
-    <p>{{portfolio.testimonial[1]}}
-  </div>
-
-</div>
 
 <!-- Footer Section -->
 <footer>

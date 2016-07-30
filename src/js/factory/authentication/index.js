@@ -2,7 +2,7 @@
 
 var angular = require('angular');
 
-angular.module('myApp').factory('Authentication', ['$rootScope', '$location', '$firebaseAuth', '$firebaseObject',
+angular.module('authentication', []).factory('Authentication', ['$rootScope', '$location', '$firebaseAuth', '$firebaseObject',
 
   function($rootScope, $location, $firebaseAuth, $firebaseObject) {
 
@@ -55,3 +55,5 @@ angular.module('myApp').factory('Authentication', ['$rootScope', '$location', '$
     return myObject
   }
 ])
+
+module.exports = 'authentication';

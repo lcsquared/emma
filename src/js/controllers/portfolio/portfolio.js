@@ -1,26 +1,9 @@
-PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject']
+PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject', 'dbConnect', 'portfolio'];
 
-function PortfolioController($scope, $rootScope, $firebaseObject){
+function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, portfolio){
 
-	var ref = firebase.database().ref("portfolio");
-	var obj = $firebaseObject(ref);
-	obj.$bindTo($scope, "portfolio");
-	// meetingsInfo.$loaded().then(function(data){
-	// 	$rootScope.howManyMeetings = meetingsInfo.length;
-	// });
-	//
-	// meetingsInfo.$watch(function(data){
-	// 	$rootScope.howManyMeetings = meetingsInfo.length;
-	// });
-
-	// $scope.addMeeting = function(){
-	// 	meetingsInfo.$add({
-	// 		name: $scope.meetingname,
-	// 		date: Firebase.ServerValue.TIMESTAMP
-	// 	}).then(function(){
-	// 		$scope.meetingname = '';
-	// 	})
-	// };
-};
+	$scope.portfolio = portfolio;
+	$scope.section = 'portfolio';
+}
 
 module.exports = PortfolioController;
