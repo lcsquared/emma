@@ -5,8 +5,9 @@ var angularfire = require('angularfire');
 
 angular.module('myApp', ['ngRoute', 'firebase']);
 
+require('./lib/jquery.easing.min.js');
+require('./lib/agency.js');
 require('./../css/agency.scss');
-// require('./../css/agency.min.css');
 require('./factory/authentication');
 require('./controllers/admin');
 require('./controllers/portfolio');
