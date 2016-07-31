@@ -5,24 +5,26 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 	// Connect the resolve portfolio to scope
 	$scope.portfolio = portfolio;
 
-	$scope.currentTestimonial = 0;
+	$scope.currentTestimonial = portfolio.testimonial[0];
 
 	$scope.changeTestimonial = function(num){
-		$scope.currentTestimonial = num;
-		console.log($scope.testimonialContent)
+		$scope.currentTestimonial = portfolio.testimonial[num];
 	};
 
-	$scope.testimonialContent = portfolio.testimonial[$scope.currentTestimonial].contents
-	$scope.testimonialName = portfolio.testimonial[$scope.currentTestimonial].name
-	$scope.testimonialCompany = portfolio.testimonial[$scope.currentTestimonial].company
-	$scope.testimonialTitle = portfolio.testimonial[$scope.currentTestimonial].title
+// Control the status of the services dropdown
 
-	// $scope.$watch('currentTestimonial', function() {
-	// 	$scope.testimonialContent = portfolio.testimonial[$scope.currentTestimonial].contents;
-	// 	$scope.testimonialName = portfolio.testimonial[$scope.currentTestimonial].name;
-	// 	$scope.testimonialCompany = portfolio.testimonial[$scope.currentTestimonial].company
-	// 	$scope.testimonialTitle = portfolio.testimonial[$scope.currentTestimonial].title
-	// });
+	$scope.serviceOpen = false;
+	$scope.serviceDefault = true;
+	$scope.selectService = function(num) {
+		if ($scope.serviceDefault === true || $scope.serviceOpen === false || $scope.currentService===num){
+			$scope.serviceOpen = $scope.serviceOpen === false ? true: false;
+			if ($scope.serviceOpen === false) {
+				$scope.serviceDefault = true;
+			}
+			$scope.serviceDefault = false;
+		}
+		$scope.currentService = num;
+	}
 
 }
 
