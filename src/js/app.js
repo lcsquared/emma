@@ -54,6 +54,14 @@ angular.module('myApp', ['ngRoute', 'firebase', auth, dbConnect, portfolio, regi
     }
   });
 }])
+require('./lib/jquery.easing.min.js');
+require('./lib/agency.js');
+require('./../css/agency.scss');
+require('./factory/authentication');
+require('./controllers/admin');
+require('./controllers/portfolio');
+require('./controllers/registration');
+require('./config');
 
 var config = {
   apiKey: "AIzaSyAj_o4s49Aowy7v4oUg0FTEme52ik306l4",
