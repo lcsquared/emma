@@ -836,3 +836,22 @@ body {
     background-color: blue;
   }
 }
+
+.testimonial-tab {
+  height: 150px;
+  background-color: grey;
+  border: 1px  solid black;
+  text-align: center;
+  transition: all 0.5s;
+  // filter: grayscale(100%);
+}
+
+.testimonial-tab:hover {
+  background-color: green;
+  border: 1px  solid black;
+  text-align: center;
+}
+
+.no-padding{
+  padding: 0;
+}
