@@ -18,3 +18,18 @@
 .carousel .item img {
   width: 100%; /*img width*/
 }
+
+
+/** Social Media and Links **/
+
+aside.clients {
+  background-color: #019bfc;
+}
+
+img#icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 30px auto;
+  font-size: 2.5em;
+}
