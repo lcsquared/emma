@@ -24,7 +24,36 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 				});
 			}
 
+			$scope.mondayClick = function(num){
+				$scope.portfolio.availability.mon[num] = ($scope.portfolio.availability.mon[num] === 0) ? 1 : 0
+			}
+
+			$scope.tuesdayClick = function(num){
+				$scope.portfolio.availability.tue[num] = ($scope.portfolio.availability.tue[num] === 0) ? 1 : 0
+			}
+
+			$scope.wednesdayClick = function(num){
+				$scope.portfolio.availability.wed[num] = ($scope.portfolio.availability.wed[num] === 0) ? 1 : 0
+			}
+
+			$scope.thursdayClick = function(num){
+				$scope.portfolio.availability.thu[num] = ($scope.portfolio.availability.thu[num] === 0) ? 1 : 0
+			}
+
+			$scope.fridayClick = function(num){
+				$scope.portfolio.availability.fri[num] = ($scope.portfolio.availability.fri[num] === 0) ? 1 : 0
+			}
+
+			$scope.saturdayClick = function(num){
+				$scope.portfolio.availability.sat[num] = ($scope.portfolio.availability.sat[num] === 0) ? 1 : 0
+			}
+
+			$scope.sundayClick = function(num){
+				$scope.portfolio.availability.sun[num] = ($scope.portfolio.availability.sun[num] === 0) ? 1 : 0
+			}
+
 			$scope.saveTab1 = function(){
+				obj.availability = $scope.portfolio.availability;
 				obj.name = $scope.portfolio.name;
 				saveChanges(obj);
 			};

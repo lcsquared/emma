@@ -27,7 +27,92 @@
                       <h1>Admin</h1>
                     </div>
                     <div class="admin-main-content">
-                      <p>This is where the admin content is going to go.</p>
+                      <p>Mark your availability:</p>
+                      <div class="row">
+                        <div class="col-xs-2">
+                        </div>
+                        <div class="col-xs-10">
+                          <span class="admin-avail-hours-dbl">12</span>
+                          <span class="admin-avail-hours-sgl">3
+                          </span>
+                          <span class="admin-avail-hours-sgl">6
+                          </span>
+                          <span class="admin-avail-hours-sgl">9
+                          </span>
+                          <span class="admin-avail-hours-dbl">12
+                          </span>
+                          <span class="admin-avail-hours-sgl">3
+                          </span>
+                          <span class="admin-avail-hours-sgl">6
+                          </span>
+                          <span class="admin-avail-hours-sgl">9
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-2">
+                            Monday:
+                          </div>
+                          <div class="col-xs-10">
+                            <div class="admin-avail-box" ng-repeat="item in portfolio.availability.mon track by $index" ng-click="mondayClick($index)" ng-class="(portfolio.availability.mon[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                              </div>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                              Tuesday:
+                            </div>
+                            <div class="col-xs-10">
+                              <div class="admin-avail-box" ng-repeat="item in portfolio.availability.tue track by $index" ng-click="tuesdayClick($index)" ng-class="(portfolio.availability.tue[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                                </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-2">
+                              Wednesday:
+                            </div>
+                            <div class="col-xs-10">
+                            <div class="admin-avail-box" ng-repeat="item in portfolio.availability.wed track by $index" ng-click="wednesdayClick($index)" ng-class="(portfolio.availability.wed[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                              </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-2">
+                                Thursday:
+                              </div>
+                              <div class="col-xs-10">
+                              <div class="admin-avail-box" ng-repeat="item in portfolio.availability.thu track by $index" ng-click="thursdayClick($index)" ng-class="(portfolio.availability.thu[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                                </div>
+                              </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-xs-2">
+                                  Friday:
+                                </div>
+                                <div class="col-xs-10">
+                                <div class="admin-avail-box" ng-repeat="item in portfolio.availability.fri track by $index" ng-click="fridayClick($index)" ng-class="(portfolio.availability.fri[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-xs-2">
+                                    Saturday:
+                                  </div>
+                                  <div class="col-xs-10">
+                                  <div class="admin-avail-box" ng-repeat="item in portfolio.availability.sat track by $index" ng-click="saturdayClick($index)" ng-class="(portfolio.availability.sat[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                                    </div>
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-2">
+                                      Sunday:
+                                    </div>
+                                    <div class="col-xs-10">
+                                    <div class="admin-avail-box" ng-repeat="item in portfolio.availability.sun track by $index" ng-click="sundayClick($index)" ng-class="(portfolio.availability.sun[$index] === 0)? 'admin-avail-empty' : 'admin-avail-checked'">
+                                      </div>
+                                    </div>
+                                    </div>
+
                       <label for="name">Name:</label>
                       <input type="text" ng-model="portfolio.name" class="form-control" >
                       <input type="submit" value="Save Changes" ng-click="saveTab1()" class="btn btn-primary admin-submit-btn"/>

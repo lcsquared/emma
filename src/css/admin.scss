@@ -94,3 +94,29 @@ html, body {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
   margin: .5em 0;
 }
+
+.admin-avail-box {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.admin-avail-box:hover {
+  background-color: green;
+}
+
+.admin-avail-checked {
+  background-color: green;
+}
+
+.admin-avail-hours-dbl {
+  padding-right: 11px;
+  border-left: 1px solid #dbd9dc;
+
+}
+
+.admin-avail-hours-sgl {
+  padding-right: 17px;
+  border-left: 1px solid #dbd9dc;
+}
