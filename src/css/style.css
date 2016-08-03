@@ -20,16 +20,41 @@
 }
 
 
-/** Social Media and Links **/
+/** Social Media and Links Section **/
 
 aside.clients {
   background-color: #019bfc;
 }
 
-img#icon {
+aside img#icon {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin: 30px auto;
   font-size: 2.5em;
+}
+
+
+/** About Section **/
+
+#about img#profile {
+  display: block;
+  margin: 30px auto;
+}
+
+#about #text {
+  display: block;
+  margin: 30px auto;
+}
+
+#about h2 {
+  text-align: right;
+}
+
+#about h4 {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #about h2 {
+    text-align: center;
+  }
 }
