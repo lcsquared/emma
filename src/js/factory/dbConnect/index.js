@@ -12,7 +12,6 @@ angular.module('dbConnect', []).factory('dbConnect', ['$rootScope', '$location',
         var obj =  $firebaseObject(ref);
         return obj.$loaded()
           .then(function(data){
-            console.log(data)
             return data;
           })
           .catch(function(error){
