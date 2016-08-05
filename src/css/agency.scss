@@ -828,17 +828,15 @@ img::-moz-selection {
   background: transparent;
 }
 
-body { 
+body {
   -webkit-tap-highlight-color: $brand-primary;
 }
-<<<<<<< HEAD
-=======
+
 @media(min-width:768px) {
   .navbar-default-opaque {
     background-color: #373B44;
   }
 }
->>>>>>> a1edcde14126e27cf8931e32e5ac323f963e14ed
 
 .testimonial-tab {
   height: 50px;
