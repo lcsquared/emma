@@ -44,7 +44,6 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 		var availStr = getAvail(hours)
 		avail[k] = availStr;
 	}
-	console.log(avail)
 
 	function getAvail(list){
 		var hours = list;
@@ -85,6 +84,7 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 		return string
 	}
 
+	$scope.availability = avail;
 }
 
 
