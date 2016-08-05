@@ -58,3 +58,41 @@ aside img#icon {
     text-align: center;
   }
 }
+
+
+/** Testimonial Section **/
+
+#testimonial {
+  background-color: #ff6666;
+}
+
+#testimonial #quote {
+  padding: 50px 20px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  background-color: #000000;
+  opacity: 0.6;
+  color: #ffffff;
+  height: 450px;  /** adjust this with tab size **/
+}
+
+#testimonial #quote p {
+  font-size: 1.25em;
+}
+
+#testimonial #tab {
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+@media (max-width: 767px) {
+  section#testimonial {
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+
+  #testimonial #quote {
+    min-height: 467px;
+  }
+}
+
