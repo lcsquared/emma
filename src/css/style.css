@@ -23,13 +23,17 @@
 /** Social Media and Links Section **/
 
 aside.clients {
-  background-color: #019bfc;
+  background-color: #73C8A9;
 }
 
 aside img#icon {
   display: block;
-  margin: 30px auto;
-  font-size: 2.5em;
+  margin: 20px auto;
+  font-size: 1.5em;
+}
+
+img#icon:hover {
+  color: #E1B866;
 }
 
 

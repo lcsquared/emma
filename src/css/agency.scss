@@ -92,7 +92,7 @@ h6 {
 .navbar-default {
   background-color: $gray-darkest;
   border-color: transparent;
-
+  text-shadow: 1px 1px #000;
 
 
   .navbar-brand {
@@ -187,7 +187,7 @@ h6 {
 }
 
 header {
-  background-image: url('/img/header-table_bg.jpg');
+  background-image: url('/img/header-restaurant_bg.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -833,7 +833,7 @@ body {
 }
 @media(min-width:768px) {
   .navbar-default-opaque {
-    background-color: blue;
+    background-color: #373B44;
   }
 }
 
