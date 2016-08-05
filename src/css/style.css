@@ -23,13 +23,17 @@
 /** Social Media and Links Section **/
 
 aside.clients {
-  background-color: #019bfc;
+  background-color: #73C8A9;
 }
 
 aside img#icon {
   display: block;
-  margin: 30px auto;
-  font-size: 2.5em;
+  margin: 20px auto;
+  font-size: 1.5em;
+}
+
+img#icon:hover {
+  color: #E1B866;
 }
 
 
@@ -58,3 +62,41 @@ aside img#icon {
     text-align: center;
   }
 }
+
+
+/** Testimonial Section **/
+
+#testimonial {
+  background-color: #ff6666;
+}
+
+#testimonial #quote {
+  padding: 50px 20px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  background-color: #000000;
+  opacity: 0.6;
+  color: #ffffff;
+  height: 450px;  /** adjust this with tab size **/
+}
+
+#testimonial #quote p {
+  font-size: 1.25em;
+}
+
+#testimonial #tab {
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+@media (max-width: 767px) {
+  section#testimonial {
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+
+  #testimonial #quote {
+    min-height: 467px;
+  }
+}
+
