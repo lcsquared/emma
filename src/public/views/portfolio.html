@@ -36,22 +36,22 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-3">
-        <a href="#">
+        <a href="https://www.facebook.com">
           <img src="img/logos/icon-facebook.png" class="img-responsive img-centered fa-stack" id="icon" alt="facebook">
         </a>
       </div>
       <div class="col-xs-3">
-        <a href="#">
+        <a href="mailto:lopezbacani@gmail.com?Subject=Consultation">
           <img src="img/logos/icon-email.png" class="img-responsive img-centered fa-stack" id="icon" alt="gmail">
         </a>
       </div>
       <div class="col-xs-3">
-        <a href="#">
+        <a href="https://www.instagram.com/carrissa_lopez/">
           <img src="img/logos/icon-instagram.png" class="img-responsive img-centered fa-stack" id="icon" alt="instagram">
         </a>
       </div>
       <div class="col-xs-3">
-        <a href="#">
+        <a href="https://www.linkedin.com/in/emma-lopez-bacani-4b198544">
           <img src="img/logos/icon-linkedin.png" class="img-responsive img-centered fa-stack" id="icon" alt="linkedin">
         </a>
       </div>
@@ -59,13 +59,12 @@
   </div>
 </aside>
 
-<!-- My Promise Section -->
+<!-- Background Section -->
 <section>
-  <div id="mypromise" class="container">
+  <div id="background" class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">My Promise</h2>
-        <h3 class="section-subheading text-muted">Blah Blah Blah</h3>
+        <h2 class="section-heading">How I Got Started</h2>
       </div>
     </div>
     <div class="row">
@@ -73,10 +72,10 @@
         <img src="https://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg?1335469974" class="img-responsive img-rounded" alt="Free HTML5 Template">
       </div>
       <div class="col-lg-4">
-        <h2 class="text-center">How I got started</h2>
-        <p>Lorem Khaled Ipsum is a major key to success. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. The key is to enjoy life, because they don’t want you to enjoy life. I promise you, they don’t want you to jetski, they don’t want you to smile. The key to more success is to get a massage once a week, very important, major key, cloth talk. We don’t see them, we will never see them. You smart, you loyal, you a genius </p>
-        <p>Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. The key to more success is to have a lot of pillows.</p>
-        <p><a href="#" class="btn btn-primary">What Clients Are Saying!</a></p>
+        <p>Originally from Hamilton, Ontario. I've been living in California for the last 4 years. Always been obessed with food, environment, science, restaurants and books, I decided to take chemical engineering and enviromental science to learn more about the world.</p>
+        <p>In Canada, I worked as a food inspector for OMAFRA and found my passion for quality and interaction with farmers, business owners and workers. This gave me a wonderful foundation on teamwork, diligence and disclipine.</p>
+        <p>But I wanted to challenge myself, so I decided to pack my bags and head down to LA. Not expecting to stay long, I've re-discovered my passion for food, enviroment and solving challenges for clients.</p>
+        <p><a href="#testimonial" class="btn btn-primary">What Clients Are Saying!</a></p>
       </div>
     </div>
   </div>
@@ -88,38 +87,46 @@
     <div class="row">
       <div class="col-lg-12 text-center">
           <h2 class="section-heading">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-      </div>
     </div>
     <div class="row text-center">
       <div class="col-xs-4" ng-click="selectService(1)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-calendar-check-o fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
+          <h4 class="service-heading">Consultation</h4>
       </div>
       <div class="col-xs-4" ng-click="selectService(2)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Responsive Design</h4>
+          <h4 class="service-heading">Permits</h4>
       </div>
       <div class="col-xs-4" ng-click="selectService(3)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-check fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Web Security</h4>
+          <h4 class="service-heading">Design and Installations</h4>
       </div>
     </div>
     <div class="row" ng-show="serviceOpen">
-        <div class="col-md-12">
-          <p>This is where the content is going to go</p>
-          <p>Current service is {{currentService}}
+        <div class="row" ng-show="serviceOpen">
+            <div ng-if="currentService === 1" class="col-md-12">
+              <p>Provide and assessment and solutions to your challenges.</p>
+              <p>Current service is {{currentService}}
+            </div>
+            <div ng-if="currentService === 2" class="col-md-12">
+              <p>Go through application process and approval to get your permit on time that meets all the requirements to get an approval. Since this is a case-by-case basis for each client, I will make sure we work with you to address any concerns.</p>
+              <p>Current service is {{currentService}}
+            </div>
+            <div ng-if="currentService === 3" class="col-md-12">
+              <p>Work together with your team during design and installation of product or process. Its important we work together to transfer the knowledge to your team during time of installation of both design and technical aspects.</p>
+              <p>Current service is {{currentService}}
+            </div>
         </div>
-      </div>
+    </div>
   </div>
 </section>
 
@@ -145,18 +152,18 @@
     <div class="col-sm-3" id="tab">
       <div class="row">
         <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(0)">
-          <div class="testimonial-tab">
-            Tab 1
+          <div class="testimonial-tab" id="tab1">
+            <img src="img/testimonial_img1.jpg">
           </div>
         </div>
         <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(1)">
-          <div class="testimonial-tab">
-            Tab 2
+          <div class="testimonial-tab" id="tab2">
+            <img src="img/testimonial_img2.jpg">
           </div>
         </div>
         <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(2)">
-          <div class="testimonial-tab">
-            Tab 3
+          <div class="testimonial-tab" id="tab3">
+            <img src="img/testimonial_img1.jpg">
           </div>
         </div>
       </div>
@@ -168,10 +175,10 @@
 <section id="about">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <img class="img-responsive" id="profile" src="img/about/2.jpg" alt="Emma Profile Picture">
-      </div>
-      <div class="col-md-8">
+      </div> -->
+      <div class="col-md-10">
         <div class="row" id="text">
           <div class="col-sm-3 col-xs-12">
             <h2 class="section-heading">ABOUT <u>ME</u></h2>
@@ -183,8 +190,6 @@
                 <h4 class="subheading">{{portfolio.about.title}}</h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted">{{portfolio.about.bio}}</p>
-                <p class="text-muted">{{portfolio.about.bio}}</p>
                 <p class="text-muted">{{portfolio.about.bio}}</p>
               </div>
             </div>
@@ -202,30 +207,42 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Contact Us</h2>
-        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        <h3 class="section-subheading text-muted"></h3>
       </div>
     </div>
     <div class="row">
+      <div ng-if="contactSuccess" class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Thank you for your message!</strong> I will be in touch shortly.
+      </div>
+      <div ng-if="contactError" class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>An error has occured. Please resubmit your message.</strong>
+      </div>
       <div class="col-lg-12">
-        <form name="sentMessage" id="contactForm" novalidate>
+        <form ng-submit="submitContact()" id="contactForm" novalidate>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                <input type="text" class="form-control" placeholder="Your Name *" id="InputName" ng-model="contactName" required data-validation-required-message="Please enter your name." name="InputName">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                <input type="email" class="form-control" placeholder="Your Email *" id="InputEmail" ng-model="contactEmail" name="InputEmail"  required data-validation-required-message="Please enter your email address.">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                <input type="tel" class="form-control" placeholder="Your Phone *" id="InputPhone" ng-model="contactPhone" name="InputPhone" required data-validation-required-message="Please enter your phone number.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                <textarea class="form-control" placeholder="Your Message *" name="InputMessage" ng-model="contactMessage" id="InputMessage" required data-validation-required-message="Please enter a message."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -247,7 +264,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Availability This Week</h2>
-        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
       </div>
     </div>
     <div class="row">
@@ -259,6 +276,8 @@
         <p> Friday : {{availability.fri}}</p>
         <p> Saturday : {{availability.sat}}</p>
         <p> Sunday : {{availability.sun}}</p>
+        {{contactSuccess}}
+        {{contactError}}
       </div>
     </div>
   </div>

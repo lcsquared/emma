@@ -1,7 +1,5 @@
 
-
 /** Carousel **/
-
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
@@ -24,7 +22,7 @@
 /** Social Media and Links Section **/
 
 aside.clients {
-  background-color: #73C8A9;
+  background-color: #E8F3F8;
 }
 
 aside img#icon {
@@ -48,6 +46,7 @@ img#icon:hover {
 #about #text {
   display: block;
   margin: 30px auto;
+  padding-left: 200px;
 }
 
 #about h2 {
@@ -55,12 +54,15 @@ img#icon:hover {
 }
 
 #about h4 {
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
   #about h2 {
     text-align: center;
+  }
+  #about #text {
+    padding-left: 0;
   }
 }
 
@@ -68,7 +70,7 @@ img#icon:hover {
 /** Testimonial Section **/
 
 #testimonial {
-  background-color: #ff6666;
+  background-color: #C2CBCE;
 }
 
 #testimonial #quote {
@@ -90,6 +92,12 @@ img#icon:hover {
   margin-bottom: -50px;
 }
 
+div #tab1 img{
+  /*background-image: url('img/testimonial_img1.jpg');*/
+  width: 363.75px;
+  height: 150px;
+}
+
 @media (max-width: 767px) {
   section#testimonial {
     padding-bottom: 0;
@@ -100,4 +108,3 @@ img#icon:hover {
     min-height: 467px;
   }
 }
-

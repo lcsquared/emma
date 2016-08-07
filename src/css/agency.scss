@@ -609,12 +609,13 @@ aside.clients {
 
 section#contact {
   background-color: $gray-darkest;
-  background-image: url('/img/contact-bg.jpg');
+  background-image: url('/img/contact_img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   .section-heading {
     color: white;
+    text-shadow: 2px 2px black;
   }
 
   .form-group {
@@ -859,7 +860,8 @@ body {
 
 @media(min-width:768px) {
   .navbar-default-opaque {
-    background-color: blue;
+    background-color: #373B44;
+    padding: 10px;
   }
 
   .testimonial-tab {
