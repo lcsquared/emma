@@ -92,19 +92,19 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 			};
 
 			$scope.uploadImage = function(file) {
-				var fileName = $scope[file]
-				// Upload.upload({
-				// 	url: '/admin/upload-image',
-				// 	data: {file: file}
-				// }).then(function(resp){
-				// 	console.log(resp.config.data)
-				// }, function (resp) {
-				// 	console.log(resp.status);
-				// }, function(evt) {
-				// 	var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
-				// 	console.log(progressPercentage + "%")
-				// });
-				console.log(fileName)
+				Upload.upload({
+					url: '/admin/upload-image',
+					method: 'POST',
+					file: file,
+					filename: file.name
+				}).then(function(resp){
+					console.log(resp)
+				}, function (resp) {
+					console.log(resp.status);
+				}, function(evt) {
+					var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
+					console.log(progressPercentage + "%")
+				});
 			}
 
 			$scope.currentTab = 1;

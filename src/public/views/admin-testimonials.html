@@ -15,9 +15,8 @@
   <label for="company">Testimonial Body:</label>
   <textarea class="form-control" ng-model="portfolio.testimonial[0].contents"></textarea>
   <label for="image">Background Image:</label>
-  <div class="button btn btn-default" ngf-select ng-model="file1" name="file" ngf-pattern="'.jpg,.png,.jpeg'"
-    ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
-  <div class="button btn btn-primary" ng-click="uploadImage('file1')">
+  <div class="button btn btn-default" ngf-select ng-model="picFile" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
+  <div class="button btn btn-primary" ng-click="uploadImage(picFile)">Upload File</div>
 </div>
 <h3>Testimonial 2</h3>
 <div>
