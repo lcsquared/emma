@@ -2,6 +2,7 @@ $(function() {
 
   "use strict";
 
+  var topoffset = 100; // variable for menu height
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); // get the height of the window
 
@@ -18,6 +19,12 @@ $(function() {
   $(window).resize(function() {
     wheight = $(window).height(); // get the height of the window
     $('.fullheight').css('height',wheight); // set to window tallness
+  });
+
+  // Activate Scrollspy
+  $('body').scrollspy({
+    target: 'nav#mainNav',
+    offset: topoffset
   });
 
   // Automatically generate carousel indicators

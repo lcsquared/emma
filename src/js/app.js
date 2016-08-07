@@ -3,6 +3,7 @@ var ngRoute = require('angular-route');
 var firebase = require('firebase');
 var angularfire = require('angularfire');
 
+// require('./../js/BootSideMenu.js');
 require('./../js/myscript.js');
 var auth = require('./factory/authentication');
 var dbConnect = require('./factory/dbConnect');
