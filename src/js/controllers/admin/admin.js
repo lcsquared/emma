@@ -18,9 +18,12 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 
 			function saveChanges(obj){
 				obj.$save().then(function(ref){
+					$scope.saveSuccess = true;
+					setTimeout(function(){ $scope.saveSuccess = false; }, 5000);
 					ref.key === obj.$id;
 				}, function(error){
-					console.log("Error:", error);
+					$scope.saveError = true;
+					setTimeout(function(){ $scope.saveError = false; }, 5000);
 				});
 			}
 
@@ -91,12 +94,17 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 				saveChanges(obj);
 			};
 
-			var currentUpload;
+			$scope.currentUpload = null;
 			var section;
 
 			$scope.uploadImage = function(file, section, num=null) {
-				currentUpload = num;
+				$scope.currentUpload = num;
 				section = section;
+				if(file===undefined){
+					$scope.noFileError = true;
+					setTimeout(function(){ $scope.noFileError = false; }, 3000);
+					return "err";
+				}
 				Upload.upload({
 					url: '/admin/upload-image',
 					method: 'POST',
@@ -105,11 +113,12 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 				}).then(function(resp){
 						if(section==="testimonial") {
 							obj.testimonial[currentUpload].image = resp.data.filename
-							console.log(obj.testimonial[currentUpload])
+							$scope.uploadSuccess = {"current": currentUpload, "status": true};
+							setTimeout(function(){ $scope.uploadSuccess.status = false; }, 5000);
 						}
-					console.log()
 				}, function (resp) {
-					console.log(resp.status);
+					$scope.uploadError = true;
+					setTimeout(function(){ $scope.uploadError.status = false; }, 5000);
 				}, function(evt) {
 					var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
 					console.log(progressPercentage +"%")

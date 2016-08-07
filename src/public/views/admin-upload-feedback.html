@@ -1,0 +1,20 @@
+<div ng-if="uploadSuccess.status" class="alert alert-success alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Image upload successful!</strong>
+</div>
+
+<div ng-if="uploadError.status" class="alert alert-danger alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>An error has occured. Please try again.</strong>
+</div>
+
+<div ng-if="noFileError" class="alert alert-danger alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Please select a file.</strong>
+</div>
