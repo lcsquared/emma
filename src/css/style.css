@@ -31,9 +31,10 @@ aside img#icon {
 }
 
 img#icon:hover {
-  color: #E1B866;
+  /*background-color: #FED136;*/
+  font-size: 2em;
+  opacity: .8;
 }
-
 
 /** About Section **/
 
