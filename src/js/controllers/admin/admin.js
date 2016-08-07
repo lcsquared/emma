@@ -91,19 +91,28 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 				saveChanges(obj);
 			};
 
-			$scope.uploadImage = function(file) {
+			var currentUpload;
+			var section;
+
+			$scope.uploadImage = function(file, section, num=null) {
+				currentUpload = num;
+				section = section;
 				Upload.upload({
 					url: '/admin/upload-image',
 					method: 'POST',
 					file: file,
 					filename: file.name
 				}).then(function(resp){
-					console.log(resp)
+						if(section==="testimonial") {
+							obj.testimonial[currentUpload].image = resp.data.filename
+							console.log(obj.testimonial[currentUpload])
+						}
+					console.log()
 				}, function (resp) {
 					console.log(resp.status);
 				}, function(evt) {
 					var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
-					console.log(progressPercentage + "%")
+					console.log(progressPercentage +"%")
 				});
 			}
 

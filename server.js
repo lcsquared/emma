@@ -17,8 +17,8 @@ app.get('*', function response(req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 app.post('/admin/upload-image', upload.single('file'), function(req,res,next){
-  console.log("Server got file");
-  res.json({"filename": res.req.file.filename});
+  var filetype = res.req.file.mimetype.split('/')[1];
+  res.json({"filename": res.req.file.filename+"." + filetype});
 });
 
 app.post('/contact', function(req, res){
