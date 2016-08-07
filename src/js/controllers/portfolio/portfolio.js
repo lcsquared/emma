@@ -1,6 +1,6 @@
-PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject', 'dbConnect', 'portfolio'];
+PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject', 'dbConnect', 'portfolio', '$http'];
 
-function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, portfolio){
+function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, portfolio, $http){
 
 	// Connect the resolve portfolio to scope
 	$scope.portfolio = portfolio;
@@ -15,6 +15,7 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 
 	$scope.serviceOpen = false;
 	$scope.serviceDefault = true;
+
 	$scope.selectService = function(num) {
 		if ($scope.serviceDefault === true || $scope.serviceOpen === false || $scope.currentService===num){
 			$scope.serviceOpen = $scope.serviceOpen === false ? true: false;
@@ -26,6 +27,24 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 		$scope.currentService = num;
 	}
 	// Get the availability hashes
+
+	$scope.submitContact = function() {
+		var data = {
+			 "name": $scope.contactName,
+			 "email": $scope.contactEmail,
+			 "phone": $scope.contactPhone,
+			 "message": $scope.contactMessage
+		};
+		$http.post('/contact', data).then(
+			function(){
+				$scope.contactSuccess = true;
+				setTimeout(function(){ $scope.contactSuccess = false; }, 15000);
+			}, function() {
+				$scope.contactError = true;
+				setTimeout(function(){ $scope.contactError = false; }, 15000);
+			}
+		);
+	}
 
 	var availability = $scope.portfolio.availability
 
@@ -48,40 +67,40 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 	function getAvail(list){
 		var hours = list;
 		var string = "";
-
+		var sub = "";
 		for (var i=0; i<hours.length; i++){
 
 		  if (i===0){
 				if(hours[i+1]-hours[i]>1){
-					var sub = hours[i] + ","
+					sub = hours[i] + ",";
 				} else {
-					var sub = hours[i]
+					sub = hours[i];
 				}
-				string += sub
+				string += sub;
 		  } else if (i===(hours.length-1)){
-		    string += hours[i]
+		    string += hours[i];
 		  } else if (hours[i]-hours[i-1]===1 && hours[i+1]-hours[i]===1 && string.substr(string.length-1)!=="-"){
-		    string += "-"
+		    string += "-";
 		  } else if (hours[i]-hours[i-1]===1 && hours[i+1]-hours[i]>1){
 				if (string.substr(string.length-1)!=="-"){
-					var sub = "-" + hours[i] + ","
+					sub = "-" + hours[i] + ",";
 				} else {
-					var sub =  hours[i] + ","
+					sub =  hours[i] + ",";
 				}
-		    string += sub
+		    string += sub;
 		  } else if (hours[i]-hours[i-1]>1 && hours[i+1]-hours[i]===1) {
-		    var sub = hours[i] + "-"
-		    string += sub
+		    sub = hours[i] + "-";
+		    string += sub;
 		  } else if (hours[i]-hours[i-1]>1 && hours[i+1]-hours[i]>1) {
 				if (string.substr(string.length-1)!==","){
-					var sub =  "," + hours[i] +","
+					sub =  "," + hours[i] +",";
 				} else {
-					var sub = hours[i] + ","
+					sub = hours[i] + ",";
 				}
-		    string += sub
+		    string += sub;
 		  }
 		}
-		return string
+		return string;
 	}
 
 	$scope.availability = avail;

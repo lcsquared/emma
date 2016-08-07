@@ -25,18 +25,18 @@ app.post('/contact', function(req, res){
       from: 'contact@emmabacani.com',
       to: 'contact@emmabacani.com', // list of receivers
       subject: 'New Website Contact Form Submission', // Subject line
-      html: '<p><b>Message from</b> : '+ req.body.InputName + '</p><br><p><b>Sender</b> : ' + req.body.InputEmail + "</p><br><p><b>Sender's Phone Number</b> :" + req.body.InputPhone + '</p><br><b><p>Message</b> : ' + req.body.InputMessage + '</p>'
+      html: '<p><b>Message from</b> : '+ req.body.name + '</p><br><p><b>Sender</b> : ' + req.body.email + "</p><br><p><b>Sender's Phone Number</b> :" + req.body.phone + '</p><br><b><p>Message</b> : ' + req.body.message + '</p>'
   };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
       if(error){
-          return console.log(error);
+          console.log(error);
+          res.sendStatus(500);
       }
       console.log('Message sent: ' + info.response);
+      res.sendStatus(200);
   });
-
-  res.redirect('/');
 });
 
 app.listen(port, '0.0.0.0', function onStart(err) {
