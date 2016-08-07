@@ -1,7 +1,6 @@
 
 
 /** Carousel **/
-
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
@@ -99,4 +98,3 @@ img#icon:hover {
     min-height: 467px;
   }
 }
-

@@ -33,7 +33,10 @@ angular.module('myApp', ['ngRoute', 'firebase', auth, dbConnect, portfolio, regi
    resolve: {
      currentAuth: function(Authentication) {
          return Authentication.requireAuth();
-       } //prevent unauthorized access
+       }, //prevent unauthorized access
+       portfolio: function(dbConnect){
+         return dbConnect.getData("portfolio");
+       }
    }
  }).
  otherwise({
