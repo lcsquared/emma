@@ -45,6 +45,7 @@ img#icon:hover {
 #about #text {
   display: block;
   margin: 30px auto;
+  padding-left: 200px;
 }
 
 #about h2 {
@@ -52,12 +53,15 @@ img#icon:hover {
 }
 
 #about h4 {
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
   #about h2 {
     text-align: center;
+  }
+  #about #text {
+    padding-left: 0;
   }
 }
 
