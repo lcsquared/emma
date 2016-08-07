@@ -65,7 +65,6 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">My Promise</h2>
-        <h3 class="section-subheading text-muted">Blah Blah Blah</h3>
       </div>
     </div>
     <div class="row">
@@ -74,9 +73,10 @@
       </div>
       <div class="col-lg-4">
         <h2 class="text-center">How I got started</h2>
-        <p>Lorem Khaled Ipsum is a major key to success. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. The key is to enjoy life, because they don’t want you to enjoy life. I promise you, they don’t want you to jetski, they don’t want you to smile. The key to more success is to get a massage once a week, very important, major key, cloth talk. We don’t see them, we will never see them. You smart, you loyal, you a genius </p>
-        <p>Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. The key to more success is to have a lot of pillows.</p>
-        <p><a href="#" class="btn btn-primary">What Clients Are Saying!</a></p>
+        <p>Originally from Hamilton, Ontario. I've been living in California for the last 4 years. Always been obessed with food, environment, science, restaurants and books, I decided to take chemical engineering and enviromental science to learn more about the world.</p>
+        <p>In Canada, I worked as a food inspector for OMAFRA and found my passion for quality and interaction with farmers, business owners and workers. This gave me a wonderful foundation on teamwork, diligence and disclipine.</p>
+        <p>But I wanted to challenge myself, so I decided to pack my bags and head down to LA. Not expecting to stay long, I've re-discovered my passion for food, enviroment and solving challenges for clients.</p>
+        <p><a href="#testimonial" class="btn btn-primary">What Clients Are Saying!</a></p>
       </div>
     </div>
   </div>
@@ -88,38 +88,46 @@
     <div class="row">
       <div class="col-lg-12 text-center">
           <h2 class="section-heading">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-      </div>
     </div>
     <div class="row text-center">
       <div class="col-xs-4" ng-click="selectService(1)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-calendar-check-o fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
+          <h4 class="service-heading">Consultation</h4>
       </div>
       <div class="col-xs-4" ng-click="selectService(2)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Responsive Design</h4>
+          <h4 class="service-heading">Permits</h4>
       </div>
       <div class="col-xs-4" ng-click="selectService(3)">
           <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-check fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Web Security</h4>
+          <h4 class="service-heading">Design and Installations</h4>
       </div>
     </div>
     <div class="row" ng-show="serviceOpen">
-        <div class="col-md-12">
-          <p>This is where the content is going to go</p>
-          <p>Current service is {{currentService}}
+        <div class="row" ng-show="serviceOpen">
+            <div class="col-md-12">
+              <p>Provide and assessment and solutions to your challenges.</p>
+              <p>Current service is {{currentService}}
+            </div>
+            <div class="col-md-12">
+              <p>Go through application process and approval to get your permit on time that meets all the requirements to get an approval. Since this is a case-by-case basis for each client, I will make sure we work with you to address any concerns.</p>
+              <p>Current service is {{currentService}}
+            </div>
+            <div class="col-md-12">
+              <p>Work together with your team during design and installation of product or process. Its important we work together to transfer the knowledge to your team during time of installation of both design and technical aspects.</p>
+              <p>Current service is {{currentService}}
+            </div>
         </div>
-      </div>
+    </div>
   </div>
 </section>
 
@@ -179,8 +187,6 @@
                 <h4 class="subheading">{{portfolio.about.title}}</h4>
               </div>
               <div class="timeline-body">
-                <p class="text-muted">{{portfolio.about.bio}}</p>
-                <p class="text-muted">{{portfolio.about.bio}}</p>
                 <p class="text-muted">{{portfolio.about.bio}}</p>
               </div>
             </div>
