@@ -1,0 +1,53 @@
+<div class="admin-main-box">
+  <div class="admin-main-header">
+    <h1>Testimonials</h1>
+  </div>
+<div class="admin-main-content">
+<p>Please upload images before attempting to save or your changes will not be made.</p>
+<h3>Testimonial 1</h3>
+<div>
+  <label for="name">Client's Name/Alias:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].name">
+  <label for="title">Client's Title:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].title">
+  <label for="company">Client's Company:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[0].company">
+  <label for="company">Testimonial Body:</label>
+  <textarea class="form-control" ng-model="portfolio.testimonial[0].contents"></textarea>
+  <label for="image">Background Image:</label>
+  <div class="button btn btn-default" ngf-select ng-model="picOne" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
+  <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picOne, 'testimonial', 0)">Upload File</div>
+</div>
+<h3>Testimonial 2</h3>
+<div>
+  <label for="name">Client's Name/Alias:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].name">
+  <label for="title">Client's Title:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].title">
+  <label for="company">Client's Company:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[1].company">
+  <label for="company">Testimonial Body:</label>
+  <textarea class="form-control" ng-model="portfolio.testimonial[1].contents"></textarea>
+  <label for="image">Background Image:</label>
+  <div class="button btn btn-default" ngf-select ng-model="picTwo" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
+  <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picTwo, 'testimonial', 1)">Upload File</div>
+
+</div>
+
+<h3>Testimonial 3</h3>
+<div>
+  <label for="name">Client's Name/Alias:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].name">
+  <label for="title">Client's Title:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].title">
+  <label for="company">Client's Company:</label>
+  <input type="text" class="form-control" ng-model="portfolio.testimonial[2].company">
+  <label for="company">Testimonial Body:</label>
+  <textarea class="form-control" ng-model="portfolio.testimonial[2].contents"></textarea>
+  <label for="image">Background Image:</label>
+  <div class="button btn btn-default" ngf-select ng-model="picThree" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
+  <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picThree, 'testimonial', 2)">Upload File</div>
+</div>
+<input type="submit" class="btn btn-primary admin-submit-btn" value="Save Changes" ng-click="saveTab2()" />
+</div>
+</div>

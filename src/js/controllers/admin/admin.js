@@ -1,6 +1,6 @@
-AdminController.$inject = ['$scope', '$rootScope', '$firebaseAuth', '$firebaseObject'];
+AdminController.$inject = ['$scope', '$rootScope', '$firebaseAuth', '$firebaseObject', 'Upload'];
 
-function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
+function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upload){
 	"use strict";
 	var storage = firebase.storage()
 	var storageRef = storage.ref();
@@ -91,6 +91,30 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject){
 				saveChanges(obj);
 			};
 
+			var currentUpload;
+			var section;
+
+			$scope.uploadImage = function(file, section, num=null) {
+				currentUpload = num;
+				section = section;
+				Upload.upload({
+					url: '/admin/upload-image',
+					method: 'POST',
+					file: file,
+					filename: file.name
+				}).then(function(resp){
+						if(section==="testimonial") {
+							obj.testimonial[currentUpload].image = resp.data.filename
+							console.log(obj.testimonial[currentUpload])
+						}
+					console.log()
+				}, function (resp) {
+					console.log(resp.status);
+				}, function(evt) {
+					var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
+					console.log(progressPercentage +"%")
+				});
+			}
 
 			$scope.currentTab = 1;
 

@@ -4,17 +4,21 @@ var webpack = require('webpack');
 var config = require('./webpack.config.js');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
+var multer = require('multer');
+var upload = multer({dest: './dist/images'});
 
 var port = process.env.PORT || 8080;
 var app = express();
 
 app.use(express.static(__dirname + '/dist'));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.get('*', function response(req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
+app.post('/admin/upload-image', upload.single('file'), function(req,res,next){
+  var filetype = res.req.file.mimetype.split('/')[1];
+  res.json({"filename": res.req.file.filename+"." + filetype});
 });
 
 app.post('/contact', function(req, res){
