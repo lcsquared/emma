@@ -2,21 +2,6 @@ PortfolioController.$inject = ['$scope', '$rootScope', '$firebaseObject', 'dbCon
 
 function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, portfolio, $http){
 
-  // Action when nav is clicked
-  // $scope.scrollTo = function(scrollLocation) {
-  // 	$location.hash(scrollLocation);
-  	
-  // 	var topoffset = $('nav#mainNav').outerHeight(true);
-  // 	$anchorScroll.yOffset = topoffset;
-  	
-  	// var newHash = 'anchor';
-  	// if ($location.hash() !== newHash) {
-  	// 	$location.hash('anchor');
-  	// } else {
-  		// $anchorScroll();
-  	// }
-  // };
-
 	// Connect the resolve portfolio to scope
 	$scope.portfolio = portfolio;
 
