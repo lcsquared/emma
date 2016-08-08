@@ -876,13 +876,13 @@ body {
 }
 
 .service-details-content {
-  background-color: #b9c2c6;
+  background-color: #e8f3f8;
   height: 250px;
   margin-bottom: -95px;
 }
 
 .service-section:hover .services-triangle {
-    background-color: #b9c2c6;
+    background-color: #e8f3f8;
 }
 
 .services-triangle {
@@ -894,7 +894,7 @@ body {
 }
 
 .services-triangle-solid {
-  background-color: #b9c2c6;
+  background-color: #e8f3f8;
 }
 
 @media(min-width:768px) {
@@ -928,4 +928,18 @@ body {
 
 .service-image-3 {
   background-image: url('/img/design.jpg');
+}
+
+.section-break {
+  height: 75px;
+  background-color: grey;
+}
+
+.availability {
+  background-color: (255,255,255, 0.5)
+}
+
+.availability p {
+  line-height: normal;
+  color: white;
 }

@@ -24,7 +24,11 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 			}
 			$scope.serviceDefault = false;
 		}
-		$scope.currentService = num;
+		if($scope.serviceOpen === false){
+			$scope.currentService = -1;
+			} else {
+			$scope.currentService = num;
+		}
 	}
 	// Get the availability hashes
 
