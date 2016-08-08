@@ -273,6 +273,7 @@ section {
 
 .service-heading {
   margin: 15px 0;
+  height: 40px;
   text-transform: none;
 }
 
@@ -859,23 +860,29 @@ body {
 }
 
 .services-closed {
-  height: 335px;
+  height: 310px;
   overflow: hidden;
   transition: all 2s;
 }
 
 .service-details {
-  background-color: green;
   position: relative;
-  top:-80px;
+  top:-95px;
+  margin-bottom: -95px;
+  height: 250px;
+  transition: all linear 2s;
+  padding: 15px;
+  text-align: left;
 }
 
-.ng-hide-add, .ng-hide-remove{
-  transition: all linear 2s;
+.service-details-content {
+  background-color: #b9c2c6;
+  height: 250px;
+  margin-bottom: -95px;
 }
 
 .service-section:hover .services-triangle {
-    background-color: green;
+    background-color: #b9c2c6;
 }
 
 .services-triangle {
@@ -884,6 +891,10 @@ body {
   background-color: black;
   transform: rotate(45deg);
   margin: 30px auto;
+}
+
+.services-triangle-solid {
+  background-color: #b9c2c6;
 }
 
 @media(min-width:768px) {
@@ -895,4 +906,8 @@ body {
   .testimonial-tab {
     height: 150px;
   }
+}
+
+#testimonial {
+    transition: all linear 2s;
 }

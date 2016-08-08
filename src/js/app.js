@@ -2,6 +2,7 @@ var angular = require('angular');
 var ngRoute = require('angular-route');
 var firebase = require('firebase');
 var angularfire = require('angularfire');
+var animate = require('angular-animate');
 
 require('./../js/myscript.js');
 var auth = require('./factory/authentication');
@@ -11,7 +12,7 @@ var registration = require('./controllers/registration');
 var admin = require('./controllers/admin');
 //require('./config');
 
-angular.module('myApp', ['ngRoute', 'firebase', auth, dbConnect, portfolio, registration, admin])
+angular.module('myApp', [animate, 'ngRoute', 'firebase', auth, dbConnect, portfolio, registration, admin])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
  $routeProvider.
  when('/', {
