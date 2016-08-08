@@ -17,6 +17,7 @@
   <label for="image">Background Image:</label>
   <div class="button btn btn-default" ngf-select ng-model="picOne" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
   <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picOne, 'testimonial', 0)">Upload File</div>
+  <div ng-if="currentUpload===0" ng-include="'/views/admin-upload-feedback.html'">
 </div>
 <h3>Testimonial 2</h3>
 <div>
@@ -31,7 +32,7 @@
   <label for="image">Background Image:</label>
   <div class="button btn btn-default" ngf-select ng-model="picTwo" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
   <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picTwo, 'testimonial', 1)">Upload File</div>
-
+  <div ng-if="currentUpload===1" ng-include="'/views/admin-upload-feedback.html'">
 </div>
 
 <h3>Testimonial 3</h3>
@@ -47,7 +48,10 @@
   <label for="image">Background Image:</label>
   <div class="button btn btn-default" ngf-select ng-model="picThree" name="file"  ngf-max-size="20MB" ngf-min-height="100" >Select File</div>
   <div class="button btn btn-primary admin-submit-btn" ng-click="uploadImage(picThree, 'testimonial', 2)">Upload File</div>
+  <div ng-if="currentUpload===2" ng-include="'/views/admin-upload-feedback.html'">
 </div>
+<br />
 <input type="submit" class="btn btn-primary admin-submit-btn" value="Save Changes" ng-click="saveTab2()" />
+<div ng-include="'/views/admin-save-feedback.html'">
 </div>
 </div>
