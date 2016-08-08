@@ -21,18 +21,6 @@ $(function() {
     $('.fullheight').css('height',wheight); // set to window tallness
   });
 
-  // Activate Scrollspy
-  // $('body').scrollspy({
-  //   target: 'nav#mainNav',
-  //   offset: topoffset
-  // });
-
-  // $('nav li a').click(function (event) {
-  //   $('body,html').animate({
-  //     scrollTop: topoffset
-  //   }, 500);
-  // });
-
   // Automatically generate carousel indicators
   for (var i=0; i < slideqty; i++) {
     var insertText = '<li data-target="#featured" data-slide-to="' + i + '"></li>';
