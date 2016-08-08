@@ -2,7 +2,7 @@ $(function() {
 
   "use strict";
 
-  var topoffset = 100; // variable for menu height
+  // var topoffset = $('nav#mainNav').outerHeight(true);
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); // get the height of the window
 
@@ -22,10 +22,16 @@ $(function() {
   });
 
   // Activate Scrollspy
-  $('body').scrollspy({
-    target: 'nav#mainNav',
-    offset: topoffset
-  });
+  // $('body').scrollspy({
+  //   target: 'nav#mainNav',
+  //   offset: topoffset
+  // });
+
+  // $('nav li a').click(function (event) {
+  //   $('body,html').animate({
+  //     scrollTop: topoffset
+  //   }, 500);
+  // });
 
   // Automatically generate carousel indicators
   for (var i=0; i < slideqty; i++) {
