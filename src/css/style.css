@@ -1,4 +1,10 @@
 
+/** Navigation Bar Scroll **/
+
+/*.anchor {
+  padding-top: 10px; 
+}*/
+
 /** Carousel **/
 .carousel-control.right,
 .carousel-control.left {
@@ -65,6 +71,17 @@ img#icon:hover {
   #about #text {
     padding-left: 0;
   }
+}
+
+
+/** Services Section **/
+
+i:active {
+  color: #373B44;
+}
+
+i:hover {
+  color: #373B44;
 }
 
 
