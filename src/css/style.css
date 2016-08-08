@@ -42,6 +42,12 @@ img#icon:hover {
   opacity: .8;
 }
 
+/*div#social-icons img:hover,
+div#social-icons img:focus,
+div#social-icons img:active {
+  background-color: #FED136;
+}*/
+
 /** About Section **/
 
 #about img#profile {
