@@ -5,7 +5,7 @@ var config = require('./webpack.config.js');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var multer = require('multer');
-var upload = multer({dest: './dist/images'});
+var upload = multer({dest: './src/public/images'});
 
 var port = process.env.PORT || 8080;
 var app = express();

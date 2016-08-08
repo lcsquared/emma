@@ -4,6 +4,7 @@ var firebase = require('firebase');
 var angularfire = require('angularfire');
 var animate = require('angular-animate');
 
+// require('./../js/BootSideMenu.js');
 require('./../js/myscript.js');
 var auth = require('./factory/authentication');
 var dbConnect = require('./factory/dbConnect');

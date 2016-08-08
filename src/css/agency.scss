@@ -911,3 +911,21 @@ body {
 #testimonial {
     transition: all linear 2s;
 }
+
+.service-image {
+  height: 250px;
+  margin-bottom: -95px;
+  background-size: cover;
+}
+
+.service-image-1 {
+  background-image: url('/img/consultation.png');
+}
+
+.service-image-2 {
+  background-image: url('/img/permits.png');
+}
+
+.service-image-3 {
+  background-image: url('/img/design.jpg');
+}

@@ -1,3 +1,7 @@
+/*
+body {
+  position: relative;
+}*/
 
 /** Navigation Bar Scroll **/
 
@@ -21,8 +25,8 @@
 
 .carousel .item img {
   width: 100%; /*img width*/
+  height: 88vh;
 }
-
 
 /** Social Media and Links Section **/
 
@@ -131,3 +135,21 @@ div #tab1 img{
     min-height: 467px;
   }
 }
+
+/** Login **/
+
+.modal-footer {   
+  border-top: 0px; 
+}
+
+.show {
+  margin-top: 100px; 
+}
+
+#admin-login-title {
+  text-transform: capitalize;
+}
+
+
+
+

@@ -2,6 +2,7 @@ $(function() {
 
   "use strict";
 
+  // var topoffset = $('nav#mainNav').outerHeight(true);
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); // get the height of the window
 
