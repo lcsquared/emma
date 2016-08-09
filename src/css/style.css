@@ -161,15 +161,15 @@ i:hover {
 }
 
 .tab1-bg {
-  background-image: url('./../public/img/testimonial_img1.jpg');
+  background-image: url('./../public/img/testimonial_img1-lg.jpg');
 }
 
 .tab2-bg {
-  background-image: url('./../public/img/testimonial_img2.jpg');
+  background-image: url('./../public/img/testimonial_img2-lg.jpg');
 }
 
 .tab3-bg {
-  background-image: url('./../public/img/testimonial_img3.jpg');
+  background-image: url('./../public/img/testimonial_img3-lg.jpg');
 }
 
 .toggler {
