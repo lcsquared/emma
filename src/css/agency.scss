@@ -85,6 +85,7 @@ h6 {
   border-radius: 3px;
   font-size: 18px;
   padding: 20px 40px;
+  margin-left: 255px;
 }
 
 // Custom Navigation Bar
@@ -262,6 +263,8 @@ section {
     margin-bottom: 75px;
   }
 }
+
+
 
 @media(min-width:768px) {
   section {
@@ -614,9 +617,9 @@ section#contact {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /*text-shadow: 2px 2px black;*/
   .section-heading {
     color: white;
-    text-shadow: 2px 2px black;
   }
 
   .form-group {
@@ -882,19 +885,20 @@ body {
 }
 
 .service-section:hover .services-triangle {
-    background-color: #e8f3f8;
+    background-color: #f7f7f7;
 }
 
 .services-triangle {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  transform: rotate(45deg);
   margin: 30px auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 100px 100px;
+  border-color: transparent transparent #A7DBD8 transparent;
 }
 
 .services-triangle-solid {
-  background-color: #e8f3f8;
+  background-color: #f7f7f7;
 }
 
 @media(min-width:768px) {
@@ -932,7 +936,7 @@ body {
 
 .section-break {
   height: 75px;
-  background-color: grey;
+  background-color: #E0E4CC;
 }
 
 .availability {
