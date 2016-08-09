@@ -194,18 +194,19 @@ i:hover {
 
 /** Contact Availability **/
 
-h2#contact-heading {
-  color: black;
+/*h2#contact-heading {
+  color: white;
 }
-
+*/
 .col-lg-4.availability {
   background-color: #373B44;
   opacity: .9;
 }
 
-h3.section-heading {
+h3.section-availability {
   padding-left: 10px;
   height: 35px;
+  color: #fff;
 }
 
 
