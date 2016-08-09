@@ -89,11 +89,11 @@ i:hover {
   color: #373B44;
 }
 
-
 /** Testimonial Section **/
 
 #testimonial {
   background-color: #C2CBCE;
+  padding: 0;
 }
 
 #testimonial .row {
@@ -107,12 +107,14 @@ i:hover {
 
 #testimonial #quote {
   padding: 50px 20px;
-  margin-top: -50px;
-  margin-bottom: -50px;
   background-color: #4D4D4D;
   opacity: 0.8;
   color: #ffffff;
-  height: 450px;  /** adjust this with tab size **/
+  height: 600px;  /** adjust this with tab size **/
+}
+
+#testimonial #quote h2 {
+  padding-top: 50px;
 }
 
 #testimonial #quote p {
@@ -120,15 +122,33 @@ i:hover {
 }
 
 #testimonial #tab {
-  margin-top: -50px;
-  margin-bottom: -50px;
+  /*margin-top: -50px;
+  margin-bottom: -50px;*/
 }
 
-div #tab1 img{
-  /*background-image: url('img/testimonial_img1.jpg');*/
+.testimonial-tab {
+  background-color: #333333;
+  border: none;
+  filter: grayscale(100%);
+}
+
+@media (min-width: 768px) {
+  .testimonial-tab {
+    height: 200px;
+  }
+}
+
+.testimonial-tab:hover {
+  background-color: #4D4D4D;
+  border: none;
+  filter: none;
+}
+
+/*div #tab1 img{
+  background-image: url('img/testimonial_img1.jpg');
   width: 363.75px;
   height: 150px;
-}
+}*/
 
 @media (max-width: 767px) {
   section#testimonial {
