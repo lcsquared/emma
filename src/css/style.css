@@ -118,9 +118,9 @@ i:hover {
 }
 
 .testimonial-tab {
-  background-color: #333333;
+  background-color: #FED136;
   border: none;
-  filter: grayscale(100%);
+  filter: grayscale(40%);
 }
 
 @media (min-width: 768px) {
@@ -130,7 +130,7 @@ i:hover {
 }
 
 .testimonial-tab:hover {
-  background-color: #4D4D4D;
+  background-color: #FED136;
   border: none;
   filter: none;
 }
