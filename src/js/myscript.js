@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
 
   "use strict";
 
@@ -31,5 +31,18 @@ $(function() {
     interval: 2000
   });
 
+  // Change testimonial background when tap is clicked
+  $(document).on('click', '#testimonial #tab #tab1 img', function() {
+    $("#testimonial #show-testimonial").removeClass("tab2-bg").removeClass("tab3-bg").addClass("tab1-bg");
+  });
+
+  $(document).on('click', '#testimonial #tab #tab2 img', function() {
+    $("#testimonial #show-testimonial").removeClass("tab1-bg").removeClass("tab3-bg").addClass("tab2-bg");
+  });
+
+  $(document).on('click', '#testimonial #tab #tab3 img', function() {
+    $("#testimonial #show-testimonial").removeClass("tab1-bg").removeClass("tab2-bg").addClass("tab3-bg");
+  });
+
   $(".alert").alert();
-});
+})(jQuery);
