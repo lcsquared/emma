@@ -129,19 +129,25 @@
 <!-- Testimonial Section -->
 <section id="testimonial">
   <div class="row">
-    <div class="col-sm-9">
-<!--       <button type="button" class="btn btn-default btn-lg" id="test">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </button> -->
-
-      <div class="col-sm-6" id="quote">
-        <h2 class="section-heading">Testimonial</h2>
-        <p>
-          &ldquo;{{currentTestimonial.contents}}&rdquo;
-        </p>
-        <p class="author">
-          - {{currentTestimonial.name}} <a href="#" target="_blank">{{currentTestimonial.company}}</a> <span class="subtext">{{currentTestimonial.title}}</span>
-        </p>
+    <div class="col-sm-9" data-status="closed">
+      <div class="row tab1-bg" id="show-testimonial">
+        <div class="col-sm-6" id="quote">
+          <h2 class="section-heading">Testimonial</h2>
+          <p>
+            &ldquo;{{currentTestimonial.contents}}&rdquo;
+          </p>
+          <p class="author">
+            - {{currentTestimonial.name}} <a href="#" target="_blank">{{currentTestimonial.company}}</a> <span class="subtext">{{currentTestimonial.title}}</span>
+          </p>
+        </div>
+<!--         <div class="col-sm-1 toggler">
+          <span class="glyphicon glyphicon-chevron-right" style="display: none;">
+            &nbsp;
+          </span>
+          <span class="glyphicon glyphicon-chevron-left" style="display: block;">
+            &nbsp;
+          </span>
+        </div> -->
       </div>
     </div>
 
@@ -159,7 +165,7 @@
         </div>
         <div class="col-sm-12 col-xs-4 no-padding" ng-click="changeTestimonial(2)">
           <div class="testimonial-tab" id="tab3">
-            <img src="img/testimonial_img1.jpg">
+            <img src="img/testimonial_img3.jpg">
           </div>
         </div>
       </div>

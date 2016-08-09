@@ -1,7 +1,3 @@
-/*
-body {
-  position: relative;
-}*/
 
 /** Navigation Bar Scroll **/
 
@@ -101,12 +97,21 @@ i:hover {
   background-color: #C2CBCE;
 }
 
+#testimonial .row {
+  margin: 0;
+  padding: 0;
+}
+
+#testimonial .row .col-sm-9, .col-sm-3 {
+  padding: 0;
+}
+
 #testimonial #quote {
   padding: 50px 20px;
   margin-top: -50px;
   margin-bottom: -50px;
-  background-color: #000000;
-  opacity: 0.6;
+  background-color: #4D4D4D;
+  opacity: 0.8;
   color: #ffffff;
   height: 450px;  /** adjust this with tab size **/
 }
@@ -136,3 +141,29 @@ div #tab1 img{
     min-height: 467px;
   }
 }
+
+#show-testimonial {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.tab1-bg {
+  background-image: url('./../public/img/testimonial_img1.jpg');
+}
+
+.tab2-bg {
+  background-image: url('./../public/img/testimonial_img2.jpg');
+}
+
+.tab3-bg {
+  background-image: url('./../public/img/testimonial_img3.jpg');
+}
+
+/*.sidebar {
+  position: relative;
+  z-index: 2;
+  background-color: none;
+}*/

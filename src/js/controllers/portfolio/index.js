@@ -4,7 +4,7 @@ var angular = require('angular');
 
 require('./../../../css/agency.scss');
 // require('./../../../css/animate.css');
-// require('./../../../css/BootSideMenu.css');
+require('./../../../css/BootSideMenu.css');
 require('./../../../css/style.css');
 
 angular.module('portfolio', []).controller('PortfolioController', require('./portfolio.js'))
