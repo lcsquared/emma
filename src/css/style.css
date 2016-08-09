@@ -113,17 +113,8 @@ i:hover {
   height: 600px;  /** adjust this with tab size **/
 }
 
-#testimonial #quote h2 {
-  padding-top: 50px;
-}
-
 #testimonial #quote p {
   font-size: 1.25em;
-}
-
-#testimonial #tab {
-  /*margin-top: -50px;
-  margin-bottom: -50px;*/
 }
 
 .testimonial-tab {
@@ -153,11 +144,10 @@ i:hover {
 @media (max-width: 767px) {
   section#testimonial {
     padding-bottom: 0;
-    padding-top: 50px;
   }
 
   #testimonial #quote {
-    min-height: 467px;
+    max-height: 500px;
   }
 }
 
