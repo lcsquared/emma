@@ -43,7 +43,7 @@ app.post('/contact', function(req, res){
   });
 });
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+app.listen(port, function onStart(err) {
   if (err) {
     console.log(err);
   }
