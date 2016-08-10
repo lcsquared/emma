@@ -38,7 +38,7 @@ app.post('/contact', function(req, res){
           console.log(error);
           res.sendStatus(500);
       }
-      console.log('Message sent: ' + info.response);
+      console.log('Message sent: '+info.response);
       res.sendStatus(200);
   });
 });
