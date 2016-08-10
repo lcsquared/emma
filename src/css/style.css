@@ -1,9 +1,9 @@
 
 /** Navigation Bar Scroll **/
 
-/*.anchor {
-  padding-top: 10px; 
-}*/
+img#eb-logo {
+    margin-top: -35px;
+}
 
 /** Carousel **/
 .carousel-control.right,
