@@ -5,8 +5,11 @@
   // var topoffset = $('nav#mainNav').outerHeight(true);
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); // get the height of the window
+  // var tabWidth = $('#testimonial #show-testimonial #quote').outerWidth(true); // get the width of the testimonial quote tab
 
   $('.fullheight').css('height', wheight); // set to window tallness
+  // $('#testimonial #show-testimonial .toggler').css('margin-left', tabWidth);
+
 
   // replace IMG inside carousels with a background image
   $('#featured .item img').each(function() {
@@ -29,6 +32,23 @@
 
   $('.carousel').carousel({
     interval: 2000
+  });
+
+  // $(document).on('click', '#testimonial #show-testimonial #quote', function() {
+  //   tabWidth = $('#testimonial #show-testimonial #quote').outerWidth(true);
+  //   $('#testimonial #show-testimonial .toggler').css('margin-left', tabWidth-1);
+  // });
+
+  var tabWidth;
+
+  $(document).scroll(function() {
+    tabWidth = $('#testimonial #show-testimonial #quote').outerWidth(true);
+    $('#testimonial #show-testimonial .toggler').css('margin-left', tabWidth-1);
+  });
+
+  $(window).resize(function() {
+    tabWidth = $('#testimonial #show-testimonial #quote').outerWidth(true);
+    $('#testimonial #show-testimonial .toggler').css('margin-left', tabWidth-1);
   });
 
   // Change testimonial background when tap is clicked
