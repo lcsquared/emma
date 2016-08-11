@@ -2,11 +2,11 @@
 /** Navigation Bar Scroll **/
 
 img#eb-logo {
-    margin-top: -20kpx;
+    margin-top: -20px;
 }
 
 /* Media Queries Nav Logo */
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   img#eb-logo {
     margin-top: -20px;
   }
@@ -31,7 +31,7 @@ img#eb-logo {
   height: 88vh;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .carousel .item img {
     width: 400px;
     height: 331px;
