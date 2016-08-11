@@ -84,7 +84,7 @@ img#icon:hover {
 /** Services Section **/
 
 .service-description {
-    width: 90%;
+  width: 90%;
 }
 
 i:active {
@@ -98,13 +98,13 @@ i:hover {
 div.service-title h2 {
   margin-left: 10px;
   margin-top: 25px;
-  font-size: 34px;
+  /*font-size: 34px;*/
 }
 
 div.service-description p {
   width: 90%;
   margin-left: 10px;
-  font-size: 13px;
+  /*font-size: 13px;*/
 }
 
 /* Services Media Queries */
@@ -115,12 +115,31 @@ div.service-description p {
   }
 }
 
-@media (max-width: 700px) and (min-width: 400px) {
+@media (max-width: 477px) {
+  div.service-title h2 {
+    font-size: 1em;
+  }
+  div.service-description p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 478px) {
   div.service-title h2 {
     font-size: 20px;
   }
   div.service-description p {
-    font-size: 10px; 
+    /*font-size: 10px; */
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 701px) {
+  div.service-title h2 {
+    font-size: 25px;
+  }
+  div.service-description p {
+    font-size: 1.1em;
   }
 }
 
@@ -129,7 +148,8 @@ div.service-description p {
     font-size: 30px;
   }
   div.service-description p {
-    font-size: 17px; 
+    /*font-size: 17px; */
+    font-size: 1.15em;
   }
 }
 
