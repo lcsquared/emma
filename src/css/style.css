@@ -74,6 +74,10 @@ img#icon:hover {
 
 /** Services Section **/
 
+.service-description {
+    width: 90%;
+}
+
 i:active {
   color: #373B44;
 }
@@ -82,8 +86,8 @@ i:hover {
   color: #373B44;
 }
 
-div.service-description 9 {
-  width: 690px;
+div.service-description {
+  width: 90%;
 }
 
 /* Services Media Queries */
@@ -91,6 +95,15 @@ div.service-description 9 {
 @media (max-width: 400px) {
   .services-triangle {
     visibility: hidden;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 400px) {
+  div.service-title h2 {
+    font-size: 16px;
+  }
+  div.service-description p {
+    font-size: 12px; 
   }
 }
 
