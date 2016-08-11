@@ -86,8 +86,16 @@ i:hover {
   color: #373B44;
 }
 
-div.service-description {
+div.service-title h2 {
+  margin-left: 10px;
+  margin-top: 25px;
+  font-size: 34px;
+}
+
+div.service-description p {
   width: 90%;
+  margin-left: 10px;
+  font-size: 13px;
 }
 
 /* Services Media Queries */
@@ -100,10 +108,19 @@ div.service-description {
 
 @media (max-width: 700px) and (min-width: 400px) {
   div.service-title h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
   div.service-description p {
-    font-size: 12px; 
+    font-size: 10px; 
+  }
+}
+
+@media (min-width: 900px){
+  div.service-title h2 {
+    font-size: 30px;
+  }
+  div.service-description p {
+    font-size: 17px; 
   }
 }
 
