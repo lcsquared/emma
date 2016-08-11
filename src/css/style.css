@@ -82,6 +82,10 @@ i:hover {
   color: #373B44;
 }
 
+div.service-description 9 {
+  width: 690px;
+}
+
 /* Services Media Queries */
 
 @media (max-width: 400px) {
