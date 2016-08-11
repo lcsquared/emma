@@ -5,8 +5,8 @@ img#eb-logo {
     margin-top: -35px;
 }
 
-/* Media Queries Nav Logo */
-@media (max-width: 400px) {
+/** Nav Logo Media Queries **/
+@media (max-width: 775px) and (min-width: 300px){
   img#eb-logo {
     margin-top: -10px;
     width: 150px;
@@ -29,8 +29,10 @@ img#eb-logo {
 }
 
 .carousel .item img {
-  width: 100%; /*img width*/
-  height: 88vh;
+  /*width: 100%; img width*/
+  /*height: 88vh;*/
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 400px) {
@@ -39,7 +41,6 @@ img#eb-logo {
     height: 190px;
   }
 }
-
 
 /** Social Media and Links Section **/
 
@@ -54,52 +55,13 @@ aside img#icon {
 }
 
 img#icon:hover {
-  /*background-color: #FED136;*/
   font-size: 2em;
   opacity: .8;
 }
 
+/** Background Media Queries **/
 
-/** About Section **/
-
-#about img#profile {
-  display: block;
-  margin: 30px auto;
-}
-
-#about #text {
-  display: block;
-  margin: 30px auto;
-  padding-left: 200px;
-}
-
-#about h2 {
-  text-align: right;
-}
-
-#about h4 {
-  text-align: left;
-}
-
-@media (max-width: 400px) {
-  div#about-description {
-    margin-top: 40px;
-    margin-bottom: -40px;
-  }
-}
-
-@media (max-width: 767px) {
-  #about h2 {
-    text-align: center;
-  }
-  #about #text {
-    padding-left: 0;
-  }
-}
-
-/** Background Section **/
-
-@media (max-width: 400px) {
+@media (max-width: 1191px) and (min-width: 400px){
   section#background {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -121,9 +83,16 @@ i:hover {
 }
 
 /* Services Media Queries */
+
 @media (max-width: 400px) {
   .services-triangle {
     visibility: hidden;
+  }
+}
+
+@media (max-width: 601px) and (min-width: 401px) {
+  .services-triangle {
+    border-width: 0 70px 70px 70px;
   }
 }
 
@@ -132,6 +101,12 @@ i:hover {
 #testimonial {
   background-color: #C2CBCE;
   padding: 0;
+}
+
+.testimonial-tab {
+  background-color: #FED136;
+  border: none;
+  filter: grayscale(40%);
 }
 
 #testimonial .row {
@@ -155,52 +130,10 @@ i:hover {
   font-size: 1.25em;
 }
 
-@media (min-width: 768px) and (max-width: 865px) {
-  #testimonial #quote h2 {
-    font-size: 30px;
-  }
-
-  #testimonial #quote p {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 428px) {
-  #testimonial #quote h2 {
-    font-size: 35px;
-  }
-
-  #testimonial #quote p {
-    font-size: 1.2em;
-  }
-}
-
-.testimonial-tab {
-  background-color: #FED136;
-  border: none;
-  filter: grayscale(40%);
-}
-
-@media (min-width: 768px) {
-  .testimonial-tab {
-    height: 200px;
-  }
-}
-
 .testimonial-tab:hover {
   background-color: #FED136;
   border: none;
   filter: none;
-}
-
-@media (max-width: 767px) {
-  section#testimonial {
-    padding-bottom: 0;
-  }
-
-  #testimonial #quote {
-    max-height: 500px;
-  }
 }
 
 #show-testimonial {
@@ -243,6 +176,53 @@ i:hover {
   background-color: none;
 }*/
 
+/** Testimonials Media Queries **/
+/* 767/*/
+
+@media (min-width: 768px) and (max-width: 865px) {
+  #testimonial #quote h2 {
+    font-size: 30px;
+  }
+
+  #testimonial #quote p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 428px) {
+  #testimonial #quote h2 {
+    font-size: 35px;
+  }
+
+  #testimonial #quote p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-tab {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  section#testimonial {
+    padding-bottom: 0;
+  }
+
+  #testimonial #quote {
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 1441px) {
+  div#tab1 img,
+  div#tab2 img,
+  div#tab3 img {
+    width: 100%;
+    height: 100%;
+}
+}
 
 /** Login **/
 
@@ -273,18 +253,79 @@ h3.section-availability {
   color: #fff;
 }
 
-/* MEDIA QUERIES */
+/** About Section **/
 
-@media (max-width: 400px) {
-  .col-lg-4.availability {
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 380px;
-  }
-  button.btn.btn-xl {
-    margin-left: 0px;
+#about img#profile {
+  display: block;
+  margin: 30px auto;
+}
+
+#about #text {
+  display: block;
+  margin: 30px auto;
+  padding-left: 200px;
+}
+
+#about h2 {
+  text-align: right;
+}
+
+#about h4 {
+  text-align: left;
+}
+
+/** About Media Queries **/ 
+
+@media (max-width: 767px) and (min-width: 400px){
+  div#about-description {
+    margin-top: 40px;
+    margin-bottom: -40px;
   }
 }
+
+@media (max-width: 767px) {
+  #about h2 {
+    text-align: center;
+  }
+  #about #text {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 992px) and (min-width:768px) {
+  div#about-description {
+    margin-left: -200px;
+  }
+}
+
+/* Contact Media Queries */
+
+@media (max-width: 1198px) and (min-width: 300px) {
+  .col-lg-4.availability {
+    margin-top: 20px;
+    margin-left: 0 auto;
+    width: 100%;
+  }
+  button.sendMessage {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
