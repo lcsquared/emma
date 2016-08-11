@@ -8,7 +8,9 @@ img#eb-logo {
 /* Media Queries Nav Logo */
 @media (max-width: 400px) {
   img#eb-logo {
-    margin-top: -20px;
+    margin-top: -10px;
+    width: 150px;
+    height: 48px;
   }
 }
 
@@ -39,7 +41,6 @@ img#eb-logo {
 }
 
 
-
 /** Social Media and Links Section **/
 
 aside.clients {
@@ -58,11 +59,6 @@ img#icon:hover {
   opacity: .8;
 }
 
-/*div#social-icons img:hover,
-div#social-icons img:focus,
-div#social-icons img:active {
-  background-color: #FED136;
-}*/
 
 /** About Section **/
 
@@ -85,6 +81,13 @@ div#social-icons img:active {
   text-align: left;
 }
 
+@media (max-width: 400px) {
+  div#about-description {
+    margin-top: 40px;
+    margin-bottom: -40px;
+  }
+}
+
 @media (max-width: 767px) {
   #about h2 {
     text-align: center;
@@ -94,6 +97,18 @@ div#social-icons img:active {
   }
 }
 
+/** Background Section **/
+
+@media (max-width: 400px) {
+  section#background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  div#bg-description {
+    padding-top: 15px;
+    padding-bottom: -15px;
+  }
+}
 
 /** Services Section **/
 
@@ -109,9 +124,6 @@ i:hover {
 @media (max-width: 400px) {
   .services-triangle {
     visibility: hidden;
-    /*margin-left: 20px;
-    margin-top: 50px;
-    border-width: 0 30px 30px 30px;*/
   }
 }
 
@@ -180,12 +192,6 @@ i:hover {
   border: none;
   filter: none;
 }
-
-/*div #tab1 img{
-  background-image: url('img/testimonial_img1.jpg');
-  width: 363.75px;
-  height: 150px;
-}*/
 
 @media (max-width: 767px) {
   section#testimonial {
