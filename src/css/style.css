@@ -204,14 +204,7 @@ div.service-description p {
   cursor: pointer;
 }
 
-/*.sidebar {
-  position: relative;
-  z-index: 2;
-  background-color: none;
-}*/
-
 /** Testimonials Media Queries **/
-/* 767/*/
 
 @media (min-width: 768px) and (max-width: 865px) {
   #testimonial #quote h2 {
@@ -255,7 +248,7 @@ div.service-description p {
   div#tab3 img {
     width: 100%;
     height: 100%;
-}
+  }
 }
 
 /** Login **/
@@ -344,23 +337,3 @@ h3.section-availability {
     margin: 0 auto;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
