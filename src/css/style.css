@@ -109,7 +109,7 @@ div.service-description p {
 
 /* Services Media Queries */
 
-@media (max-width: 400px) {
+@media (max-width: 659px) {
   .services-triangle {
     visibility: hidden;
   }
