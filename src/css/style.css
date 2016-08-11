@@ -43,19 +43,28 @@ img#eb-logo {
 }
 
 /** Social Media and Links Section **/
-
 aside.clients {
   background-color: #E8F3F8;
+  height: 82px;
+}
+
+aside.clients .container {
+  height: 82px;
+}
+
+aside.clients .container .row {
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
 
 aside img#icon {
   display: block;
-  margin: 20px auto;
-  font-size: 1.5em;
+  margin: 10px auto;
+  transform: scale(1.5);
 }
 
 img#icon:hover {
-  font-size: 2em;
+  transform: scale(2);
   opacity: .8;
 }
 
