@@ -5,7 +5,58 @@
   // var topoffset = $('nav#mainNav').outerHeight(true);
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); // get the height of the window
-  // var tabWidth = $('#testimonial #show-testimonial #quote').outerWidth(true); // get the width of the testimonial quote tab
+
+  var wheight;
+
+  $(document).ready(function() {
+    wheight = $(window).height();
+    $('.fullheight').css('height', wheight);
+
+    $('#featured .item img').each(function() {
+      var imgSrc = $(this).attr('src');
+      $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+      $(this).remove();
+    });
+
+    // Add an inbody class to nav when scrollspy event fires
+    $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
+      var hash = $(this).find('li.active a').attr('href');
+      if(hash !== '#featured') {
+        $('header nav').addClass('inbody');
+      } else {
+        $('header nav').removeClass('inbody');
+      }
+    });
+
+    // Use smooth scrolling when clicking on navigation
+    $('.navbar a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') ===
+        this.pathname.replace(/^\//,'') &&
+        location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-topoffset+2
+          }, 500);
+          return false;
+        } // target.length
+      } // click function
+    }); // smooth scrollin
+
+
+    for (var i=0; i < slideqty; i++) {
+      var insertText = '<li data-target="#featured" data-slide-to="' + i + '"></li>';
+      $('#featured ol').append(insertText);
+    }
+
+    $('.carousel').carousel({
+      interval: 2000
+    });
+
+    
+  });
+
 
   $('.fullheight').css('height', wheight); // set to window tallness
   // $('#testimonial #show-testimonial .toggler').css('margin-left', tabWidth);

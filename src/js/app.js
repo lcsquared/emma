@@ -5,12 +5,14 @@ var angularfire = require('angularfire');
 var animate = require('angular-animate');
 
 require('./../js/BootSideMenu.js');
-require('./../js/myscript.js');
+// require('./../js/myscript.js');
 var auth = require('./factory/authentication');
 var dbConnect = require('./factory/dbConnect');
 var portfolio = require('./controllers/portfolio');
 var registration = require('./controllers/registration');
 var admin = require('./controllers/admin');
+// require('./../js/myscript.js');
+require('./../js/carousel.js');
 //require('./config');
 
 angular.module('myApp', [animate, 'ngRoute', 'firebase', auth, dbConnect, portfolio, registration, admin])
