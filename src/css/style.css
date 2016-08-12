@@ -73,38 +73,6 @@ img#eb-logo {
   }
 }
 
-/*.carousel .item img {
-  height: 88vh;
-  width: 100%;
-}*/
-
-/*******/
-
-/*
-@media (min-width: 768px) {
-  .carousel .item img {
-    width: 100vw;
-    height: 46vh;
-  }
-}
-
-@media (max-height: 450px) {
-  .carousel .item img {
-    width: 100vw;
-    height: 65vh;
-  }
-}
-
-@media (min-width: 401px) and (max-width: 767px) {
-  .carousel .item img {
-    width: 100vw;
-    height: 46vh;
-    margin-top: 56px;
-  }
-}*/
-
-
-
 
 /** Social Media and Links Section **/
 aside.clients {
