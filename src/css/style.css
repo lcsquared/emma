@@ -28,19 +28,51 @@ img#eb-logo {
   height: 100%;
 }
 
-.carousel .item img {
-  /*width: 100%; img width*/
-  /*height: 88vh;*/
-  width: 100%;
-  height: 100%;
+@media (min-width: 992px) and (min-height: 600px) {
+  .carousel .item img {
+    height: 88vh;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) and (min-height: 600px) {
+  .carousel .item img {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) and (min-height: 450px) and (max-height: 599px) {
+  .carousel .item img {
+    width: 100%;
+    height: 82vh;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  .carousel .item img {
+    width: 100%;
+    height: 45vh;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) and (max-height: 450px) {
+  .carousel .item img {
+    width: 100%;
+    height: 65vh;
+    margin-top: 56px;
+  }
 }
 
 @media (max-width: 400px) {
   .carousel .item img {
     width: 400px;
     height: 190px;
+    margin-top: 56px;
   }
 }
+
 
 /** Social Media and Links Section **/
 aside.clients {
