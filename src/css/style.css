@@ -301,12 +301,19 @@ div.service-description p {
   opacity: .9;
   padding-top: 1px;
   padding-bottom: 5px;
+  height: 235px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h3.section-availability {
   padding-left: 10px;
   height: 35px;
   color: #fff;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 /** About Section **/
@@ -330,7 +337,7 @@ h3.section-availability {
   text-align: left;
 }
 
-/** About Media Queries **/ 
+/** About Media Queries **/
 
 @media (max-width: 767px) and (min-width: 400px){
   div#about-description {
@@ -365,4 +372,3 @@ h3.section-availability {
     margin: 0 auto;
   }
 }
-
