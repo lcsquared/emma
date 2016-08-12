@@ -82,7 +82,7 @@
 </div>
 
 <!-- Services Section -->
-<div id="services" class="bg-light-gray" ng-class="serviceOpen ? 'services-open': 'services-closed'">
+<div id="services" class="bg-light-gray">
     <div class="services-top">
         <div class="container">
             <div class="row">
@@ -118,8 +118,8 @@
             </div>
         </div>
     </div>
-    <div class="row" ng-show="serviceOpen" class="animate-show">
-        <div class="row text-center service-details">
+    <div class="row service-details" ng-class="serviceOpen ? 'services-open' : 'services-closed'" >
+      <div class="text-center" >
             <div ng-if="currentService === 1" class="col-md-12">
                 <div class="row">
                     <div class="col-xs-6 service-image service-image-1">

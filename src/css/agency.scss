@@ -847,23 +847,16 @@ body {
   padding: 0;
 }
 
-.services-closed {
-  height: 310px;
-  overflow: hidden;
-  transition: all 2s;
-}
-
 .service-details {
   position: relative;
-  top:-95px;
-  margin-bottom: -95px;
   height: 250px;
-  transition: all linear 2s;
-  padding: 15px;
+  transition: all 2s;
+  padding: 0 15px 15px 15px;
   text-align: left;
 }
 
 .service-details-content {
+  transition: all 2s;
   background-color: #e8f3f8;
   height: 250px;
   margin-bottom: -95px;
@@ -874,11 +867,11 @@ body {
 }
 
 .services-triangle {
-  margin: 30px auto;
+  margin: 30px auto 0 auto;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 100px 100px 100px;
+  border-width: 0 75px 75px 75px;
   border-color: transparent transparent #A7DBD8 transparent;
 }
 
