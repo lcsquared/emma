@@ -6,7 +6,7 @@ var animate = require('angular-animate');
 require('./../../../css/agency.scss');
 // require('./../../../css/animate.css');
 // require('./../../../css/BootSideMenu.css');
-require('./../../../css/style.css');
+require('./../../../css/style.scss');
 
 
 angular.module('portfolio', [animate]).controller('PortfolioController', require('./portfolio.js'))
