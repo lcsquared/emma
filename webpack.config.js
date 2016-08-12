@@ -61,13 +61,13 @@ module.exports = function makeWebpackConfig () {
    * Reference: http://webpack.github.io/docs/configuration.html#devtool
    * Type of sourcemap to use per build type
    */
-  if (isTest) {
-    config.devtool = 'inline-source-map';
-  } else if (isProd) {
-    config.devtool = 'source-map';
-  } else {
-    config.devtool = 'eval-source-map';
-  }
+  // if (isTest) {
+  //   config.devtool = 'inline-source-map';
+  // } else if (isProd) {
+  //   config.devtool = 'source-map';
+  // } else {
+  //   config.devtool = 'eval-source-map';
+  // }
 
   /**
    * Loaders
@@ -162,7 +162,7 @@ module.exports = function makeWebpackConfig () {
     config.plugins.push(
       // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
       // Only emit files when there are no errors
-      // new webpack.NoErrorsPlugin(),
+      new webpack.NoErrorsPlugin(),
 
       // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
       // Dedupe modules in the output
