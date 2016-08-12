@@ -58,7 +58,7 @@ function PortfolioController($scope, $rootScope, $firebaseObject, dbConnect, por
 
 	for (var k in availability){
 		var currentDay = availability[k];
-		var hours = []
+		var hours = [];
 		for (var i=0; i<currentDay.length; i++){
 			if (currentDay[i] === 1) {
 				hours.push(i)
