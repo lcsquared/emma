@@ -2,13 +2,15 @@
 /** Navigation Bar Scroll **/
 
 img#eb-logo {
-    margin-top: -20kpx;
+  margin-top: -35px;
 }
 
-/* Media Queries Nav Logo */
-@media (max-width: 400px) {
-  img#eb-logo {
-    margin-top: -20px;
+/** Nav Logo Media Queries **/
+@media (max-width: 775px) and (min-width: 300px){
+    img#eb-logo {
+    margin-top: -10px;
+    width: 150px;
+    height: 48px;
   }
 }
 
@@ -27,75 +29,63 @@ img#eb-logo {
 }
 
 .carousel .item img {
-  width: 100%; /*img width*/
-  height: 88vh;
+  /*width: 100%; img width*/
+  /*height: 88vh;*/
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 400px) {
   .carousel .item img {
     width: 400px;
-    height: 331px;
+    height: 190px;
   }
 }
 
-
-
 /** Social Media and Links Section **/
-
 aside.clients {
   background-color: #E8F3F8;
+  height: 82px;
+}
+
+aside.clients .container {
+  height: 82px;
+}
+
+aside.clients .container .row {
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
 
 aside img#icon {
   display: block;
-  margin: 20px auto;
-  font-size: 1.5em;
+  margin: 10px auto;
+  transform: scale(1.5);
 }
 
 img#icon:hover {
-  /*background-color: #FED136;*/
-  font-size: 2em;
+  transform: scale(2);
   opacity: .8;
 }
 
-/*div#social-icons img:hover,
-div#social-icons img:focus,
-div#social-icons img:active {
-  background-color: #FED136;
-}*/
+/** Background Media Queries **/
 
-/** About Section **/
-
-#about img#profile {
-  display: block;
-  margin: 30px auto;
-}
-
-#about #text {
-  display: block;
-  margin: 30px auto;
-  padding-left: 200px;
-}
-
-#about h2 {
-  text-align: right;
-}
-
-#about h4 {
-  text-align: left;
-}
-
-@media (max-width: 767px) {
-  #about h2 {
-    text-align: center;
+@media (max-width: 1191px) and (min-width: 400px){
+  section#background {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  #about #text {
-    padding-left: 0;
+  div#bg-description {
+    padding-top: 15px;
+    padding-bottom: -15px;
   }
 }
-
 
 /** Services Section **/
+
+.service-description {
+  width: 90%;
+}
 
 i:active {
   color: #373B44;
@@ -105,13 +95,67 @@ i:hover {
   color: #373B44;
 }
 
+div.service-title h2 {
+  margin-left: 10px;
+  margin-top: 25px;
+  /*font-size: 34px;*/
+}
+
+div.service-description p {
+  width: 90%;
+  margin-left: 10px;
+  /*font-size: 13px;*/
+}
+
 /* Services Media Queries */
-@media (max-width: 400px) {
+
+@media (max-width: 659px) {
   .services-triangle {
     visibility: hidden;
-    /*margin-left: 20px;
-    margin-top: 50px;
-    border-width: 0 30px 30px 30px;*/
+  }
+}
+
+@media (max-width: 477px) {
+  div.service-title h2 {
+    font-size: 1em;
+  }
+  div.service-description p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 478px) {
+  div.service-title h2 {
+    font-size: 20px;
+  }
+  div.service-description p {
+    /*font-size: 10px; */
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 701px) {
+  div.service-title h2 {
+    font-size: 25px;
+  }
+  div.service-description p {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 900px){
+  div.service-title h2 {
+    font-size: 30px;
+  }
+  div.service-description p {
+    /*font-size: 17px; */
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 601px) and (min-width: 401px) {
+  .services-triangle {
+    border-width: 0 70px 70px 70px;
   }
 }
 
@@ -120,6 +164,12 @@ i:hover {
 #testimonial {
   background-color: #C2CBCE;
   padding: 0;
+}
+
+.testimonial-tab {
+  background-color: #FED136;
+  border: none;
+  filter: grayscale(40%);
 }
 
 #testimonial .row {
@@ -143,58 +193,10 @@ i:hover {
   font-size: 1.25em;
 }
 
-@media (min-width: 768px) and (max-width: 865px) {
-  #testimonial #quote h2 {
-    font-size: 30px;
-  }
-
-  #testimonial #quote p {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 428px) {
-  #testimonial #quote h2 {
-    font-size: 35px;
-  }
-
-  #testimonial #quote p {
-    font-size: 1.2em;
-  }
-}
-
-.testimonial-tab {
-  background-color: #FED136;
-  border: none;
-  filter: grayscale(40%);
-}
-
-@media (min-width: 768px) {
-  .testimonial-tab {
-    height: 200px;
-  }
-}
-
 .testimonial-tab:hover {
   background-color: #FED136;
   border: none;
   filter: none;
-}
-
-/*div #tab1 img{
-  background-image: url('img/testimonial_img1.jpg');
-  width: 363.75px;
-  height: 150px;
-}*/
-
-@media (max-width: 767px) {
-  section#testimonial {
-    padding-bottom: 0;
-  }
-
-  #testimonial #quote {
-    max-height: 500px;
-  }
 }
 
 #show-testimonial {
@@ -231,12 +233,52 @@ i:hover {
   cursor: pointer;
 }
 
-/*.sidebar {
-  position: relative;
-  z-index: 2;
-  background-color: none;
-}*/
+/** Testimonials Media Queries **/
 
+@media (min-width: 768px) and (max-width: 865px) {
+  #testimonial #quote h2 {
+    font-size: 30px;
+  }
+
+  #testimonial #quote p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 428px) {
+  #testimonial #quote h2 {
+    font-size: 35px;
+  }
+
+  #testimonial #quote p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-tab {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  section#testimonial {
+    padding-bottom: 0;
+  }
+
+  #testimonial #quote {
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 1441px) {
+  div#tab1 img,
+  div#tab2 img,
+  div#tab3 img {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 /** Login **/
 
@@ -267,15 +309,60 @@ h3.section-availability {
   color: #fff;
 }
 
-/* MEDIA QUERIES */
+/** About Section **/
 
-@media (max-width: 400px) {
-  .col-lg-4.availability {
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 380px;
-  }
-  button.btn.btn-xl {
-    margin-left: 0px;
+#about img#profile {
+  display: block;
+  margin: 30px auto;
+}
+
+#about #text {
+  display: block;
+  margin: 30px auto;
+  padding-left: 200px;
+}
+
+#about h2 {
+  text-align: right;
+}
+
+#about h4 {
+  text-align: left;
+}
+
+/** About Media Queries **/ 
+
+@media (max-width: 767px) and (min-width: 400px){
+  div#about-description {
+    margin-top: 40px;
+    margin-bottom: -40px;
   }
 }
+@media (max-width: 767px) {
+  #about h2 {
+    text-align: center;
+  }
+  #about #text {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 992px) and (min-width:768px) {
+  div#about-description {
+    margin-left: -200px;
+  }
+}
+
+/* Contact Media Queries */
+
+@media (max-width: 1198px) and (min-width: 300px) {
+  .col-lg-4.availability {
+    margin-top: 20px;
+    margin-left: 0 auto;
+    width: 100%;
+  }
+  button.sendMessage {
+    margin: 0 auto;
+  }
+}
+
