@@ -49,6 +49,12 @@
     }
 }
 
+/** Universal tags **/
+
+
+#site-wrapper {
+  overflow-x: hidden;
+}
 
 /** Navigation Bar Scroll **/
 
@@ -511,7 +517,7 @@ h3.section-availability {
     margin: 20px;
     margin-left: 0 auto;
     width: 90%;
-    height: 260px;
+    height: 265px;
   }
 
   .availability h3 {
