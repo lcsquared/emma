@@ -67,7 +67,7 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 	 						name: $scope.portfolio.testimonial[0].name,
 	 						title: $scope.portfolio.testimonial[0].title,
 	 						company: $scope.portfolio.testimonial[0].company,
-	 						contents:$scope.portfolio.testimonial[0].contents
+	 						contents:$scope.portfolio.testimonial[0].contents,
  						},
 						1: {
 	 						name: $scope.portfolio.testimonial[1].name,
@@ -80,8 +80,16 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 	 						title: $scope.portfolio.testimonial[2].title,
 	 						company: $scope.portfolio.testimonial[2].company,
 	 						contents:$scope.portfolio.testimonial[2].contents
- 						},
+ 						}
 					};
+					if (uploadedFiles.length > 0) {
+						for (var i = 0; i<uploadedFiles.length; i++){
+							if (uploadedFiles[i].length>0) {
+								obj.testimonial[i].image = uploadedFiles[i];
+							}
+						}
+					}
+					console.log(obj)
 				saveChanges(obj);
 			};
 
@@ -94,7 +102,10 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 				saveChanges(obj);
 			};
 
+
+			// Handle file uploads
 			$scope.currentUpload = null;
+			var uploadedFiles = [];
 			var section;
 
 			$scope.uploadImage = function(file, section, num=null) {
@@ -112,8 +123,8 @@ function AdminController($scope, $rootScope, $firebaseAuth, $firebaseObject, Upl
 					filename: file.name
 				}).then(function(resp){
 						if(section==="testimonial") {
-							obj.testimonial[currentUpload].image = resp.data.filename
-							$scope.uploadSuccess = {"current": currentUpload, "status": true};
+							uploadedFiles[$scope.currentUpload] = resp.data.filename;
+							$scope.uploadSuccess = {"current": $scope.currentUpload, "status": true};
 							setTimeout(function(){ $scope.uploadSuccess.status = false; }, 5000);
 						}
 				}, function (resp) {
