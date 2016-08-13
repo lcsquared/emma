@@ -3,8 +3,8 @@
 
 /* ----------- iPhone 4 and 4S ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
@@ -15,8 +15,8 @@
 
 /* ----------- iPhone 5 and 5S ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
@@ -27,9 +27,9 @@
 
 /* ----------- iPhone 6 ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     div#my-wraper {
@@ -39,9 +39,9 @@
 
 /* ----------- iPhone 6+ ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
     div#my-wraper {
@@ -49,12 +49,6 @@
     }
 }
 
-/** Universal tags **/
-
-
-#site-wrapper {
-  overflow-x: hidden;
-}
 
 /** Navigation Bar Scroll **/
 
@@ -220,6 +214,10 @@ i:hover {
   color: #373B44;
 }
 
+.fa-stack {
+  position:unset;
+}
+
 .services-top {
   background-color: #FAFAFA;
 }
@@ -263,13 +261,17 @@ div.service-description p {
   }
   .service-section {
     font-size: 9px;
-    margin-left: -25px;
-    padding-left: 80px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .service-heading {
-    margin: 10px -17px;
-    width: 100px;
-    font-size: 1.7em;
+    margin: 10px auto;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .service-buttons {
+    margin: 0 30px;
   }
 }
 
@@ -518,7 +520,7 @@ h3.section-availability {
     margin: 20px;
     margin-left: 0 auto;
     width: 90%;
-    height: 265px;
+    height: 260px;
   }
 
   .availability h3 {
