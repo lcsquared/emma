@@ -909,8 +909,18 @@ body {
 }
 
 .section-break {
-  height: 75px;
   background-color: #FAFAFA;
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-size: 100px 100%;
+  background-image: -webkit-gradient(linear, 100% 0, 0 100%, color-stop(0.5, #dd3333), color-stop(0.5, #fff));
+  background-image: linear-gradient(to right, #fafafa 50%, #fff 50%);
+  -webkit-background-size: 130px 100%;
+  background-size: 130px 100%;
 }
 
 .availability {

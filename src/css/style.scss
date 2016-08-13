@@ -168,7 +168,13 @@ i:hover {
 }
 
 .service-section {
-  margin-top: 30px;
+  margin-top: 85px;
+  margin-bottom: -20px;
+}
+
+#services-row {
+    margin-top: 60px;
+    margin-bottom: -60px;
 }
 
 div.service-title h2 {
@@ -197,6 +203,15 @@ div.service-description p {
   }
   div.service-description p {
     font-size: 0.8em;
+  }
+  .service-section {
+    font-size: 9px;
+    margin-left: -20px;
+    padding-left: 75px;
+  }
+  .service-heading {
+    margin: 10px -10px;
+    width: 100px;
   }
 }
 
@@ -379,7 +394,7 @@ div.service-description p {
   opacity: .9;
   padding-top: 1px;
   padding-bottom: 5px;
-  height: 235px;
+  height: 245px;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -445,7 +460,7 @@ h3.section-availability {
     margin: 20px;
     margin-left: 0 auto;
     width: 90%;
-    height: 250px;
+    height: 260px;
   }
 
   .availability h3 {
