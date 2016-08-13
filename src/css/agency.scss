@@ -99,13 +99,13 @@ h6 {
   .navbar-brand {
     color: $brand-primary;
     @include script-font;
-
+/*
     &.active,
     &:active,
     &:focus,
     &:hover {
       color: darken($brand-primary, 10%);
-    }
+    }*/
   }
 
   .navbar-collapse {
@@ -120,10 +120,10 @@ h6 {
       background-color: white;
     }
 
-    &:focus,
+    /*&:focus,
     &:hover {
       background-color: $brand-primary;
-    }
+    }*/
   }
 
   .nav {
