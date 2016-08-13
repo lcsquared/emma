@@ -2,15 +2,15 @@
 /** Navigation Bar Scroll **/
 
 img#eb-logo {
-  margin-top: -35px;
+  margin-top: -25px;
 }
 
 /** Nav Logo Media Queries **/
 @media (max-width: 775px) and (min-width: 300px){
   img#eb-logo {
-    margin-top: -10px;
+    margin-top: -5px;
     width: 150px;
-    height: 48px;
+    height: 39px;
   }
 }
 
