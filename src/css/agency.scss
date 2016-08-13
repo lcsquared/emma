@@ -8,8 +8,12 @@ html {
 
 body {
   height: 100%;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   @include body-font;
+}
+
+div#site-wrapper {
+  overflow-x: hidden;
 }
 
 .text-muted {

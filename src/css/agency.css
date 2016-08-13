@@ -7,6 +7,10 @@ body {
   /*overflow-x: hidden;*/
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+div#site-wrapper {
+  overflow-x: hidden;
+}
 .text-muted {
   color: #777777;
 }
