@@ -233,14 +233,14 @@ i:hover {
 }
 
 div.service-title h2 {
-  margin-left: 10px;
+  text-align: left;
   margin-top: 25px;
   /*font-size: 34px;*/
 }
 
 div.service-description p {
   width: 90%;
-  margin-left: 10px;
+  text-align: left;
   /*font-size: 13px;*/
 }
 
@@ -513,14 +513,19 @@ h3.section-availability {
   }
 }
 
+/** Contact Availability Section **/
+
 /* Contact Media Queries */
 
 @media (max-width: 1198px) and (min-width: 300px) {
   .col-lg-4.availability {
-    margin: 20px;
-    margin-left: 0 auto;
+    margin: 20px auto;
     width: 90%;
+<<<<<<< HEAD
     height: 260px;
+=======
+    height: 270px;
+>>>>>>> f9a5352c16ccfa828eaa067d64357f486da66e52
   }
 
   .availability h3 {
